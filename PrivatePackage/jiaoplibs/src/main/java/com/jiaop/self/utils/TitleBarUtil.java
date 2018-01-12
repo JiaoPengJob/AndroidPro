@@ -1,6 +1,6 @@
 package com.jiaop.self.utils;
 
-import com.jiaop.self.Entitis.TitleBarParameter;
+import com.jiaop.self.entitis.TitleBarParameter;
 import com.jiaop.self.views.TitleBar;
 
 /**

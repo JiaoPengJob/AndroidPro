@@ -1,6 +1,6 @@
 package com.jiaop.self;
 
-import com.jiaop.self.Entitis.LoggerParameter;
+import com.jiaop.self.entitis.LoggerParameter;
 import com.jiaop.self.base.BaseApp;
 
 /**

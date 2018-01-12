@@ -1,12 +1,10 @@
 package com.jiaop.self;
 
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.jiaop.self.Entitis.TitleBarParameter;
+import com.jiaop.self.entitis.TitleBarParameter;
 import com.jiaop.self.base.BaseActivity;
 import com.jiaop.self.utils.GlideUtil;
 import com.jiaop.self.utils.TitleBarUtil;

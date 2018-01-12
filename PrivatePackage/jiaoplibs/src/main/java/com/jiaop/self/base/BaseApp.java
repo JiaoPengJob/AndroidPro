@@ -2,13 +2,11 @@ package com.jiaop.self.base;
 
 import android.app.Application;
 
-import com.jiaop.self.Entitis.LoggerParameter;
+import com.jiaop.self.entitis.LoggerParameter;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
-
-import es.dmoral.toasty.Toasty;
 
 /**
  * Created by JiaoP

@@ -1,4 +1,4 @@
-package com.jiaop.self.Entitis;
+package com.jiaop.self.entitis;
 
 import android.graphics.Color;
 
