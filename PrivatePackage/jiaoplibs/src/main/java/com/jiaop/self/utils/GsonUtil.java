@@ -99,6 +99,23 @@ public class GsonUtil {
     }
 
     /**
+     * 将Object转换为对象
+     *
+     * @param response
+     * @param clazz
+     * @param <T>
+     * @return
+     */
+    public static <T> T object2Json(Object response, Class<T> clazz) {
+        try {
+            return gson.fromJson(gson.toJson(response), clazz);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
      * 获取json字符串中的值
      *
      * @param json  json字符串

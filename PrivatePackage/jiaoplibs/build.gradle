@@ -45,4 +45,5 @@ dependencies {
     api 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
     api 'com.github.GrenderG:Toasty:1.2.8'
+    api 'com.github.yhaolpz:FloatWindow:1.0.8'
 }
