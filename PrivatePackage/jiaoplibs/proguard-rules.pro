@@ -21,7 +21,6 @@
 #-renamesourcefileattribute SourceFile
 
 -keep class com.gyf.barlibrary.* {*;}
-
 -keep public class * implements  com.bumptech.glide.module.AppGlideModule
 -keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
     **[] $VALUES;
@@ -30,3 +29,11 @@
 -keep class com.bumptech.** {
     *;
 }
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+-keep class com.youth.banner.** {
+    *;
+ }

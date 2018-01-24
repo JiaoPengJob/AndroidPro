@@ -16,11 +16,21 @@
         android:id="@+id/btClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/ripple_my"
         android:text="点击" />
 
     <ImageView
         android:id="@+id/ivShow"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/tvClick"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ripple_my"
+        android:clickable="true" />
 
 </LinearLayout>

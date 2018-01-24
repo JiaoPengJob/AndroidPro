@@ -29,6 +29,11 @@ public class MainActivity extends BaseActivity {
         GlideUtil.loadCircleImg(this,"http://img0.imgtn.bdimg.com/it/u=2171073523,1991282945&fm=27&gp=0.jpg",ivShow);
     }
 
+    @OnClick(R.id.tvClick)
+    void tvClick(){
+        ToastUtil.info(this,"点击");
+    }
+
     @BindView(R.id.tbBar)
     TitleBar tbBar;
 
