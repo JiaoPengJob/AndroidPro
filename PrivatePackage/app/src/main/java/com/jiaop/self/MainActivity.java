@@ -10,6 +10,7 @@ import com.jiaop.self.utils.GlideUtil;
 import com.jiaop.self.utils.TitleBarUtil;
 import com.jiaop.self.utils.ToastUtil;
 import com.jiaop.self.views.TitleBar;
+import com.zhy.adapter.recyclerview.CommonAdapter;
 
 import butterknife.BindView;
 import butterknife.OnClick;

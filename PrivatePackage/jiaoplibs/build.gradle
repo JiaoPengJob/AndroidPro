@@ -36,10 +36,10 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.2'
     api 'com.orhanobut:logger:2.1.1'
     api 'com.youth.banner:banner:1.4.10'
-    implementation ("com.github.bumptech.glide:glide:4.4.0") {
+    implementation('com.github.bumptech.glide:glide:4.4.0') {
         exclude group: "com.android.support"
     }
-    implementation "com.android.support:support-fragment:26.1.0"
+    implementation 'com.android.support:support-fragment:26.1.0'
     api 'com.github.bumptech.glide:annotations:4.4.0'
     api 'jp.wasabeef:glide-transformations:3.0.1'
     api 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
@@ -48,4 +48,22 @@ dependencies {
     api 'com.github.yhaolpz:FloatWindow:1.0.8'
     api 'com.just.agentweb:agentweb:3.0.0'
     api 'com.yanzhenjie:permission:1.1.2'
+    api('com.zhy:base-rvadapter:3.0.3') {
+        exclude group: "com.android.support"
+    }
+    api 'com.tubb.smrv:swipemenu-recyclerview:5.4.4'
+    api 'com.github.pinguo-zhouwei:CustomPopwindow:2.1.1'
+    api 'com.yanzhenjie:album:2.0.2'
+    api 'com.wrbug:timelineview:1.0.0'
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '26.1.0'
+            }
+        }
+    }
 }
