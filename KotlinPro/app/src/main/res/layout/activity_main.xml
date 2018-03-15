@@ -6,10 +6,21 @@
     android:orientation="vertical"
     tools:context="com.jiaop.kotlin.MainActivity">
 
+    <com.jiaop.libs.views.JPTitleBar
+        android:id="@+id/tbMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.jiaop.libs.views.JPTitleBar>
+
     <Button
         android:id="@+id/btnClick"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="点击" />
+
+    <ImageView
+        android:id="@+id/ivShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY" />
 
 </LinearLayout>

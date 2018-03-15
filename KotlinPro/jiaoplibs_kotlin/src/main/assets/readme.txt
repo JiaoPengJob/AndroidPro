@@ -1,3 +1,0 @@
-使用：
-引入jiaoplibs_kotlin包
-Activity继承BaseActivity

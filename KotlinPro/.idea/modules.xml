@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KotlinPro.iml" filepath="$PROJECT_DIR$/KotlinPro.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jiaoplibs_kotlin/jiaoplibs_kotlin.iml" filepath="$PROJECT_DIR$/jiaoplibs_kotlin/jiaoplibs_kotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jiaoplibs/jiaoplibs.iml" filepath="$PROJECT_DIR$/jiaoplibs/jiaoplibs.iml" />
     </modules>
   </component>
 </project>

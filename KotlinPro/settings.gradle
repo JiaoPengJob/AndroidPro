@@ -1,1 +1,1 @@
-include ':app', ':jiaoplibs_kotlin'
+include ':app', ':jiaoplibs'
