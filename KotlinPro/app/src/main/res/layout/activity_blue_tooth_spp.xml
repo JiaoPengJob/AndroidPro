@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".BlueToothSppActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否支持蓝牙" />
+
+        <Button
+            android:id="@+id/btBlueOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打开蓝牙" />
+
+        <Button
+            android:id="@+id/btBlueClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关闭蓝牙" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btBlueScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫描蓝牙设备" />
+
+        <Button
+            android:id="@+id/btBlueSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送数据" />
+
+        <Button
+            android:id="@+id/btBlueGet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接收数据" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvBlueToothList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

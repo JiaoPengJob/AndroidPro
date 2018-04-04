@@ -9,6 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import com.gyf.barlibrary.ImmersionBar;
 import com.jiaop.libs.broadcast.JPNetworkChangeBroadcast;
 import com.jiaop.libs.interfaces.JPNetworkChangeInterface;
+import com.jiaop.libs.utils.JPActivityUtil;
+
+import butterknife.ButterKnife;
 
 /**
  * Created by jiaop
@@ -22,8 +25,12 @@ public abstract class JPBaseActivity extends AppCompatActivity implements JPNetw
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //加载布局文件
+        setContentView(layoutId());
         //隐藏标题栏
         getSupportActionBar().hide();
+        //加载ButterKnife--View注解
+        ButterKnife.bind(this);
         // 注册Broadcast Receiver
         JPNetworkChangeBroadcast netBroadcastReceiver = new JPNetworkChangeBroadcast(JPBaseActivity.this);
         IntentFilter filter = new IntentFilter();
@@ -35,7 +42,23 @@ public abstract class JPBaseActivity extends AppCompatActivity implements JPNetw
                 .statusBarColor(statusBarColor())
                 .fitsSystemWindows(true)
                 .init();
+        //Activity栈管理
+        JPActivityUtil.getInstance().addActivity(this);
+        //初始化页面
+        initView();
     }
+
+    /**
+     * 加载页面
+     */
+    protected abstract void initView();
+
+    /**
+     * 获取layoutId
+     *
+     * @return
+     */
+    protected abstract int layoutId();
 
     @Override
     public void networkChange(int status) {

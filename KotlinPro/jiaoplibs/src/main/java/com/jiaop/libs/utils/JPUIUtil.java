@@ -8,7 +8,6 @@ import android.util.DisplayMetrics;
  * Created by jiaop
  * UI界面工具类
  */
-
 public class JPUIUtil {
 
     /**

@@ -1,6 +1,6 @@
 package com.jiaop.kotlin
 
-import android.app.Application
+import com.jiaop.libs.base.JPApplication
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
@@ -9,7 +9,7 @@ import com.orhanobut.logger.PrettyFormatStrategy
 /**
  * Created by jiaop on 2018/3/9.
  */
-class MyApp : Application() {
+class MyApp : JPApplication() {
 
     override fun onCreate() {
         super.onCreate()

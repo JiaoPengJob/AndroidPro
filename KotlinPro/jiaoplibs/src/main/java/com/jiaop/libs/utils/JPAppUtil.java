@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by jiaop on 2018/3/10.
+ * Created by jiaop
  * 软件App工具类
  */
 
