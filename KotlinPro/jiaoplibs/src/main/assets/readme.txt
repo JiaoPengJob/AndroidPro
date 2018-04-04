@@ -43,3 +43,6 @@ https://github.com/pinguo-zhouwei/CustomPopwindow
 
 //相册使用 Album
 https://github.com/yanzhenjie/Album/blob/master/README-CN.md
+
+//网络访问可以使用RxEasyHttp
+https://github.com/zhou-you/RxEasyHttp
