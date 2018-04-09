@@ -37,7 +37,7 @@ class MainActivity : JPBaseActivity(), Rationale {
 
 //            startActivity<KotlinActivity>()
 
-            startActivity<BlueToothSppActivity>()
+            startActivity<NumberActivity>()
         }
 
         initTitle()

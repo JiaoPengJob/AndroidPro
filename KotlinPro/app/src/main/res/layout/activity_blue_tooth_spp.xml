@@ -57,6 +57,15 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tvCountDown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="倒计时"
+        android:textColor="@color/btColor" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvBlueToothList"
         android:layout_width="match_parent"

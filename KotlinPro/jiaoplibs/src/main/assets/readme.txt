@@ -46,3 +46,51 @@ https://github.com/yanzhenjie/Album/blob/master/README-CN.md
 
 //网络访问可以使用RxEasyHttp
 https://github.com/zhou-you/RxEasyHttp
+
+//支付宝支付
+1：修改Manifest
+在AndroidManifest.xml中添加声明：
+<activity
+    android:name="com.alipay.sdk.app.H5PayActivity"
+    android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+    android:exported="false"
+    android:screenOrientation="behind"
+    android:windowSoftInputMode="adjustResize|stateHidden" >
+</activity>
+ <activity
+    android:name="com.alipay.sdk.app.H5AuthActivity"
+    android:configChanges="orientation|keyboardHidden|navigation"
+    android:exported="false"
+    android:screenOrientation="behind"
+    android:windowSoftInputMode="adjustResize|stateHidden" >
+</activity>:
+2：权限声明
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+3：调用
+new JPAlipay(this, param, new JPAlipay.AlipayResultCallBack() {
+            @Override
+            public void onSuccess() {
+                Logger.e("支付成功");
+            }
+
+            @Override
+            public void onDealing() {
+                Logger.e("支付中...");
+            }
+
+            @Override
+            public void onError(int error_code) {
+                Logger.e("支付失败");
+            }
+
+            @Override
+            public void onCancel() {
+                Logger.e("支付取消");
+            }
+        }).goPay();
+
+//微信支付

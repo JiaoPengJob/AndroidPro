@@ -3,6 +3,7 @@ package com.jiaop.kotlin;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.clj.fastble.BleManager;
@@ -10,6 +11,7 @@ import com.clj.fastble.callback.BleScanCallback;
 import com.clj.fastble.data.BleDevice;
 import com.clj.fastble.scan.BleScanRuleConfig;
 import com.jiaop.libs.base.JPBaseActivity;
+import com.jiaop.libs.utils.JPCountdownUtil;
 import com.yanzhenjie.permission.Action;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.Permission;
@@ -156,9 +158,12 @@ public class BlueToothSppActivity extends JPBaseActivity {
         });
     }
 
+    @BindView(R.id.tvCountDown)
+    TextView tvCountDown;
+
     @OnClick(R.id.btBlueSend)
     void btBlueSend() {
-
+        JPCountdownUtil.countDownShow(tvCountDown, 60000l, 1000l, "L ", " R", "End");
     }
 
     @OnClick(R.id.btBlueGet)
