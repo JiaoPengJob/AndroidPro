@@ -1,17 +1,38 @@
 package com.jiaop.kotlin;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.widget.TextView;
 
-public class HomeFragment extends Fragment {
+import com.jiaop.libs.base.JPBaseFragment;
+
+import butterknife.BindView;
+
+public class HomeFragment extends JPBaseFragment {
+
+    @BindView(R.id.tvHomeShow)
+    TextView tvHomeShow;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View layout = inflater.inflate(R.layout.f_1, null);
-        return layout;
+    protected void initView() {
+        tvHomeShow.setText("Home 22");
+    }
+
+    @Override
+    protected int layoutId() {
+        return R.layout.f_1;
+    }
+
+    @Override
+    protected void initWiFiData() {
+        tvHomeShow.setText("Fragment Wifi");
+    }
+
+    @Override
+    protected void initNetData() {
+        tvHomeShow.setText("Fragment Net");
+    }
+
+    @Override
+    protected void initOfflineData() {
+        tvHomeShow.setText("Fragment Off");
     }
 }

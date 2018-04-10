@@ -35,6 +35,7 @@ public class NumberActivity extends JPBaseActivity {
 
     private List<Fragment> fragments = new ArrayList<>();
 
+    //初始化页面布局
     @Override
     protected void initView() {
         fragments.add(new HomeFragment());

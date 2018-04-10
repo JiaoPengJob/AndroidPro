@@ -23,7 +23,7 @@ import java.util.List;
  * Created by JiaoP
  * Fragment帮助类
  */
-public class FragmentUtil {
+public class JPFragmentUtil {
 
     private static final int TYPE_ADD_FRAGMENT = 0x01;
     private static final int TYPE_SHOW_FRAGMENT = 0x01 << 1;
@@ -37,7 +37,7 @@ public class FragmentUtil {
     private static final String ARGS_IS_HIDE = "args_is_hide";
     private static final String ARGS_IS_ADD_STACK = "args_is_add_stack";
 
-    private FragmentUtil() {
+    private JPFragmentUtil() {
         throw new UnsupportedOperationException("u can't instantiate me...");
     }
 

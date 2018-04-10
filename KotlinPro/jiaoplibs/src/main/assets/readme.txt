@@ -94,3 +94,10 @@ new JPAlipay(this, param, new JPAlipay.AlipayResultCallBack() {
         }).goPay();
 
 //微信支付
+
+
+//权限设置（必须）
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
