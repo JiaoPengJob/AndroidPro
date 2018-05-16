@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:id="@+id/llPostComments"
+    tools:context="com.tch.kuwanx.ui.mine.PostCommentsActivity">
+
+    <include layout="@layout/title"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ivResPhoto"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llPraise"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivPraise"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/praise" />
+
+                        <TextView
+                            android:id="@+id/tvPraise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="好评"
+                            android:textColor="#F7C705"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAverage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivAverage"
+                            android:layout_width="24dp"
+                            android:layout_height="18dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/average_unsel" />
+
+                        <TextView
+                            android:id="@+id/tvAverage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="中评"
+                            android:textColor="#BFBDBC"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llBadReview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivBadReview"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bad_review_unsel" />
+
+                        <TextView
+                            android:id="@+id/tvBadReview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="差评"
+                            android:textColor="#BFBDBC"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#F2F2F2"></View>
+
+            <EditText
+                android:id="@+id/etPostComment"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="#00000000"
+                android:gravity="left"
+                android:hint="请描述您的评价，认证评价有积分哦！"
+                android:padding="10dp"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvCommentPhotos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"></android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="10dp"
+                android:background="#F2F2F2"></View>
+
+            <com.zhy.view.flowlayout.TagFlowLayout xmlns:zhy="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/postCommentFlow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="6dp"
+                zhy:max_select="-1"></com.zhy.view.flowlayout.TagFlowLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#F2F2F2"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/store_shop_cart" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="店铺评分"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="描述相符"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <com.willy.ratingbar.ScaleRatingBar xmlns:rb="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/depictRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    rb:drawableEmpty="@drawable/pentagram_unsel"
+                    rb:drawableFilled="@drawable/pentagram"></com.willy.ratingbar.ScaleRatingBar>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="物流服务"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <com.willy.ratingbar.ScaleRatingBar xmlns:rb="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/logisticsRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    rb:drawableEmpty="@drawable/pentagram_unsel"
+                    rb:drawableFilled="@drawable/pentagram"></com.willy.ratingbar.ScaleRatingBar>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="服务态度"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+
+                <com.willy.ratingbar.ScaleRatingBar xmlns:rb="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/attitudeRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    rb:drawableEmpty="@drawable/pentagram_unsel"
+                    rb:drawableFilled="@drawable/pentagram"></com.willy.ratingbar.ScaleRatingBar>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="#FFFFFF"></View>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,126 @@
+package com.tch.zx.activity.mine;
+
+import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Build;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.adapter.RecommentTitleAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import me.relex.circleindicator.CircleIndicator;
+
+/**
+ * 我的/公司信息
+ */
+public class CompanyInfoMainActivity extends AppCompatActivity {
+    //公司简介信息内容
+    @BindView(R.id.tv_company_info_content)
+    TextView tv_company_info_content;
+    //查看所有的按钮布局
+    @BindView(R.id.ll_company_info_look_all)
+    LinearLayout ll_company_info_look_all;
+    //查看全部内容的图标
+    @BindView(R.id.iv_company_info_look_all)
+    ImageView iv_company_info_look_all;
+    //图片滑动展示器
+    @BindView(R.id.indicator_company_info_main)
+    CircleIndicator indicator_company_info_main;
+    //展示子页
+    @BindView(R.id.viewpager_company_info_main)
+    ViewPager viewpager_company_info_main;
+
+    //判断是否展示了全部内容
+    private boolean isAll = false;
+
+    private String text = "大大大撒都会哭发布的快速反馈你付款束ID深蓝辅导老\n" +
+            "师你付款岁打死你付多少你发你的身份难舍难分贷款是否能看上哪款你\n" +
+            "肯定傅斯年浮动亏损奋斗酷暑不符点时空反对苏菲的女生缚你的身份还\n" +
+            "得是吧南方师傅都是开发你的伤口覅留守妇女山东鲁能辅导老师你覅螺\n" +
+            "蛳粉你死定了附上努力烦恼都是那里是开发你的分布电力设备法律手段法律是你的老师力设备法分布电力设备法律手段法律是你的老师力设备法分布电力设备法律手段法律是你的老师力设备法分布电力设备法律手段法律是你的老师力设备法分布电力设备法律手段法律是你的老师力设备法分布电力设备法律手段法律是你的老师力设备法分布电力设备法律手段法律是你的老师力设备法是开发你的是开发你的是开发你的是开发你的是开发你的是开发你的是开发你的是开发你的是开发你的是开发你的是开发你的是开发你的发生粘附力孙飞到了苏凤梨酥你疯\n" +
+            "了少年富的数量分布电力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师力设备法律手段法律是你的老师不发了多少部分\n" +
+            "的历史部分南方路十年付老师大大大撒都会哭发布的快速反馈你付款束ID深蓝辅导老 --";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_company_info_main);
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+
+        tv_company_info_content.setText(text);
+
+        setCircleIndicator();
+    }
+
+    /**
+     * 展示所有公司简介信息
+     */
+    @OnClick(R.id.ll_company_info_look_all)
+    public void showAllContent() {
+
+        int lenght = tv_company_info_content.getMeasuredWidth() / 28;
+        if (isAll) {
+            tv_company_info_content.setLines(3);
+            iv_company_info_look_all.setImageResource(R.mipmap.select_all);
+            isAll = false;
+        } else {
+            tv_company_info_content.setLines(lenght);
+            iv_company_info_look_all.setImageResource(R.mipmap.top_point_content);
+            isAll = true;
+        }
+
+    }
+
+    /**
+     * 加载主页推荐tabView栏图片
+     */
+    private void setCircleIndicator() {
+        List<Bitmap> bitmaps = new ArrayList<Bitmap>();
+        for (int i = 0; i < 10; i++) {
+            bitmaps.add(BitmapFactory.decodeResource(this.getResources(), R.mipmap.recomment_title));
+        }
+        RecommentTitleAdapter recommentTitleAdapter = new RecommentTitleAdapter(bitmaps);
+        viewpager_company_info_main.setAdapter(recommentTitleAdapter);
+        indicator_company_info_main.setFocusable(false);
+        indicator_company_info_main.setViewPager(viewpager_company_info_main);
+    }
+
+    /**
+     * 编辑
+     */
+    @OnClick(R.id.tv_edit_company_info)
+    public void editInfo() {
+        Intent intent = new Intent(this, CompanyDetailsActivity.class);
+        startActivity(intent);
+    }
+}

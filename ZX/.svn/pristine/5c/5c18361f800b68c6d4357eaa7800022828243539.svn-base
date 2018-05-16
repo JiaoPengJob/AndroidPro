@@ -1,0 +1,64 @@
+package com.tch.zx.fragment.line;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.adapter.line.ClassAdapter;
+import com.tch.zx.view.RecyclerViewDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 热门直播/推荐
+ */
+
+public class OnLinePlayerItemMainFragment extends Fragment {
+
+    /**
+     * Fragment父布局
+     */
+    private View viewRoot;
+    /**
+     * 底部立即报名项
+     */
+    @BindView(R.id.tv_sign_up_now)
+    TextView tv_sign_up_now;
+    /**
+     * 底部选择支付项
+     */
+    @BindView(R.id.ll_pay_online_player_info)
+    LinearLayout ll_pay_online_player_info;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //获取父布局View
+        viewRoot = inflater.inflate(R.layout.fragment_online_player_class_info, container, false);
+        //初始化ButterKnife
+        ButterKnife.bind(this, viewRoot);
+
+        return viewRoot;
+    }
+
+    /**
+     * 立即报名
+     */
+    @OnClick(R.id.tv_sign_up_now)
+    public void signUpNow() {
+        tv_sign_up_now.setVisibility(View.GONE);
+        ll_pay_online_player_info.setVisibility(View.VISIBLE);
+    }
+
+}

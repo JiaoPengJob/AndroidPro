@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#FFDA44">
+
+        <ImageButton
+            android:id="@+id/ibStoreSearch"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/store_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="商城"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/ibStoreShopCart"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/store_shop_cart" />
+
+    </RelativeLayout>
+
+    <com.tch.kuwanx.view.EasyIndicator
+        android:id="@+id/indicatorStore"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#FFFFFF"
+        app:indicator_bottom_height="2dp"
+        app:indicator_bottom_line_color="#DAD9D9"
+        app:indicator_bottom_line_height="1dp"
+        app:indicator_height="43dp"
+        app:indicator_isBottom_line="true"
+        app:indicator_line_color="#FFDA44"
+        app:indicator_normal_color="#000000"
+        app:indicator_selected_color="#FFDA44"
+        app:indicator_textSize="14sp"
+        app:indicator_vertical_line_w="0dp" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshStoreF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/bannerStore"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    app:indicator_drawable_selected="@drawable/banner_selected"
+                    app:indicator_drawable_unselected="@drawable/banner_unselected"
+                    app:indicator_height="5dp"
+                    app:indicator_width="5dp" />
+
+                <LinearLayout
+                    android:id="@+id/llStoreCenterView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/llRecommendArticleFirst"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_weight="1"
+                            android:background="#F3F5F9"
+                            android:clickable="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvStoreCenterLeftTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:padding="5dp"
+                                android:text="标题"
+                                android:textColor="#717070"
+                                android:textSize="11sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvStoreCenterLeftNewPrice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="¥0.00"
+                                    android:textColor="#FF5401"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/tvStoreCenterLeftOldPrice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="¥0.00"
+                                    android:textColor="#A7A8A8"
+                                    android:textSize="9sp" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/ivStoreCenterLeftImg"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_margin="5dp"
+                                android:scaleType="fitXY" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llRecommendArticleSecond"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="#F3F5F9"
+                                android:clickable="true"
+                                android:orientation="horizontal"
+                                android:paddingBottom="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvStoreCenterRTTitle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="5dp"
+                                        android:text="标题"
+                                        android:textColor="#717070"
+                                        android:textSize="11sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvStoreCenterRTNewPrice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="¥0.00"
+                                        android:textColor="#FF5401"
+                                        android:textSize="11sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvStoreCenterRTOldPrice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:text="¥0.00"
+                                        android:textColor="#A7A8A8"
+                                        android:textSize="9sp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/ivStoreCenterRTImg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llRecommendArticleThird"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_weight="1"
+                                android:background="#F3F5F9"
+                                android:clickable="true"
+                                android:orientation="horizontal"
+                                android:paddingBottom="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvStoreCenterRBTitle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="2"
+                                        android:padding="5dp"
+                                        android:text="标题"
+                                        android:textColor="#717070"
+                                        android:textSize="11sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvStoreCenterRBNewPrice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="¥0.00"
+                                        android:textColor="#FF5401"
+                                        android:textSize="11sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvStoreCenterRBOldPrice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:text="¥0.00"
+                                        android:textColor="#A7A8A8"
+                                        android:textSize="9sp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/ivStoreCenterRBImg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivStoreShow"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:scaleType="fitXY" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="#FFFFFF">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvStoreList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llStoreNextContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivStoreShowSecond"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:scaleType="fitXY" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFFFFF">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvStoreListSecond"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ivStoreShowThird"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:scaleType="fitXY" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFFFFF">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvStoreListThird"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

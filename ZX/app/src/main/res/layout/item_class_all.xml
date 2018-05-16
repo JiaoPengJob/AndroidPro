@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="3dp"
+            android:background="@color/text_three"></View>
+
+        <TextView
+            android:id="@+id/tvModuleClassName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="职场人生"
+            android:textColor="@color/text_three"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="3dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/text_three"></View>
+
+    </LinearLayout>
+
+    <include layout="@layout/item_fine_little_class"></include>
+
+</LinearLayout>

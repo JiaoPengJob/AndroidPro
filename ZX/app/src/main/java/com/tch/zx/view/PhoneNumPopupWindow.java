@@ -1,0 +1,161 @@
+package com.tch.zx.view;
+
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+
+import java.util.List;
+import java.util.concurrent.TimeoutException;
+
+/**
+ * 联系人的弹出选项
+ */
+
+public class PhoneNumPopupWindow extends PopupWindow implements View.OnClickListener {
+
+    private Context context;
+    /**
+     * 父布局
+     */
+    private View view;
+    private RelativeLayout rl_popup_phone_number;
+
+    /**
+     * 取消
+     */
+    private TextView tv_cancel_phone_num;
+    /**
+     * 手机号显示布局
+     */
+    private LinearLayout ll_phone_num_context;
+    /**
+     * 手机号数据集合
+     */
+    private List<String> numbers;
+
+    /**
+     * 无参构造
+     *
+     * @param context
+     */
+    public PhoneNumPopupWindow(Context context, List<String> numbers) {
+        this.context = context;
+        this.numbers = numbers;
+        view = LayoutInflater.from(context).inflate(R.layout.popup_phone_num, null);
+        initView();
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dismiss();
+            }
+        });
+
+        // 设置外部可点击
+        setOutsideTouchable(true);
+        // view添加OnTouchListener监听判断获取触屏位置如果在选择框外面则销毁弹出框
+        view.setOnTouchListener(new View.OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+                int height = rl_popup_phone_number.getTop();
+                int y = (int) event.getY();
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (y < height) {
+                        dismiss();
+                    }
+                }
+                return true;
+            }
+        });
+
+        /* 设置弹出窗口特征 */
+        // 设置视图
+        this.setContentView(this.view);
+        // 设置弹出窗体的宽和高
+        this.setHeight(LinearLayout.LayoutParams.MATCH_PARENT);
+        this.setWidth(LinearLayout.LayoutParams.MATCH_PARENT);
+
+        // 设置弹出窗体可点击
+        this.setFocusable(true);
+
+        // 实例化一个ColorDrawable颜色为半透明
+        ColorDrawable dw = new ColorDrawable(0xb0000000);
+        // 设置弹出窗体的背景
+        this.setBackgroundDrawable(dw);
+
+        // 设置弹出窗体显示时的动画，从底部向上弹出
+//        this.setAnimationStyle(R.style.share_popup_anim);
+    }
+
+    /**
+     * 初始化组件
+     */
+    private void initView() {
+        rl_popup_phone_number = (RelativeLayout) view.findViewById(R.id.rl_popup_phone_number);
+        tv_cancel_phone_num = (TextView) view.findViewById(R.id.tv_cancel_phone_num);
+        ll_phone_num_context = (LinearLayout) view.findViewById(R.id.ll_phone_num_context);
+
+        tv_cancel_phone_num.setOnClickListener(this);
+
+        initPhoneText();
+    }
+
+    /**
+     * 加载手机号展示视图
+     */
+    private void initPhoneText() {
+
+        for (final String phoneNum : numbers) {
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            lp.setMargins(0, 0, 0, 5);
+            TextView textView = new TextView(context);
+            textView.setLayoutParams(lp);
+            textView.setText(phoneNum);
+            textView.setTextSize(18);
+            textView.setGravity(Gravity.CENTER);
+            textView.setBackground(context.getResources().getDrawable(R.drawable.shape_bg_reply_edittext));
+            textView.setPadding(10, 10, 10, 10);
+            textView.setTextColor(Color.parseColor("#333333"));
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //发送短信
+                    Uri uri = Uri.parse("smsto:" + phoneNum);
+                    Intent intentMessage = new Intent(Intent.ACTION_VIEW, uri);
+                    context.startActivity(intentMessage);
+                    dismiss();
+                }
+            });
+            ll_phone_num_context.addView(textView);
+        }
+    }
+
+    /**
+     * 点击事件监听
+     *
+     * @param view
+     */
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            //取消
+            case R.id.tv_cancel_phone_num:
+                dismiss();
+                break;
+        }
+    }
+}

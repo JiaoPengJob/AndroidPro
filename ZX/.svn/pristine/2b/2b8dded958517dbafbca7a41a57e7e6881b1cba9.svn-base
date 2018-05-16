@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/ll_info_top_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_info_class_choose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/class_seleted" />
+
+                    <TextView
+                        android:id="@+id/tv_info_class_choose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="课程"
+                        android:textColor="@color/single_green"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_info_bottom_class"
+                    android:layout_width="50dp"
+                    android:layout_height="2dp"
+                    android:background="@color/single_green"></View>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_info_top_types"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_info_types_choose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/types_unseleted" />
+
+                    <TextView
+                        android:id="@+id/tv_info_types_choose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="选集"
+                        android:textColor="@color/text_user"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_info_bottom_types"
+                    android:layout_width="50dp"
+                    android:layout_height="2dp"
+                    android:background="@color/single_green"
+                    android:visibility="gone"></View>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_info_top_talk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_info_talk_choose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/talk_unseleted" />
+
+                    <TextView
+                        android:id="@+id/tv_info_talk_choose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="评论"
+                        android:textColor="@color/text_user"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_info_bottom_talk"
+                    android:layout_width="50dp"
+                    android:layout_height="2dp"
+                    android:background="@color/single_green"
+                    android:visibility="gone"></View>
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"></View>
+
+    <include layout="@layout/sub_module_player_user_info"></include>
+
+    <ScrollView
+        android:id="@+id/sv_class_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="900dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_info_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/search_bgm"></View>
+
+                <include layout="@layout/sub_module_player_teacher_info"></include>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/search_bgm"></View>
+
+                <include layout="@layout/sub_module_player_class_info"></include>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_info_second"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/search_bgm"></View>
+
+                <include layout="@layout/sub_module_player_types_info"></include>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/search_bgm"></View>
+
+            <include layout="@layout/sub_module_player_talk_info"></include>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

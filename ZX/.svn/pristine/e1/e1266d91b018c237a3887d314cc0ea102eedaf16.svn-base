@@ -1,0 +1,63 @@
+package com.tch.zx.activity.line.column;
+
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.Window;
+import android.view.WindowManager;
+
+import com.tch.zx.R;
+import com.tch.zx.adapter.line.FreeExperienceAdapter;
+import com.tch.zx.view.RecyclerViewDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+/**
+ * 付款之后的专栏页面
+ */
+public class HasBuySubscriptionActivityActivity extends AppCompatActivity {
+    //数据列表
+    @BindView(R.id.rv_has_buy_columns)
+    RecyclerView rv_has_buy_columns;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_has_buy_subscription_activity);
+        //集成使用Butterknife
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+
+        setListData();
+    }
+
+    /**
+     * 加载列表数据
+     */
+    private void setListData() {
+        List<String> list = new ArrayList<String>();
+        list.add("0000");
+        list.add("0000");
+
+        FreeExperienceAdapter freeExperienceAdapter = new FreeExperienceAdapter(this, list);
+        rv_has_buy_columns.setLayoutManager(new LinearLayoutManager(this));
+        //设置分割线
+        rv_has_buy_columns.addItemDecoration(new RecyclerViewDecoration(this, "#EAEAEA", 30, false));
+        rv_has_buy_columns.setAdapter(freeExperienceAdapter);
+    }
+}

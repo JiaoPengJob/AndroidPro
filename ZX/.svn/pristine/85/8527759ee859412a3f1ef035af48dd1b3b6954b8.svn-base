@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tch.zx">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="AhycVXOKq9BCxQTjGOoAU2NyjY7ztP7C" />
+
+        <activity android:name=".activity.line.MainActivity" />
+        <activity android:name=".activity.login_register.GuideActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.login_register.RegisterActivity" />
+        <activity android:name=".activity.login_register.RegisterSureActivity" />
+        <activity android:name=".activity.login_register.WechatLoginActivity" />
+        <activity android:name=".activity.login_register.PhoneLoginActivity" />
+        <activity android:name=".activity.login_register.FindPasswordBackActivity" />
+        <activity android:name=".activity.line.SearchMainActivity" />
+        <activity android:name=".activity.line.PurchasedActivity" />
+        <activity android:name=".activity.line.TopListActivity" />
+        <activity android:name=".activity.login_register.TradeActivity" />
+        <activity android:name=".activity.line.online.OnLinePlayerMainActivity" />
+        <activity android:name=".activity.line.greatclass.GreatClassMainActivity" />
+        <activity
+            android:name=".activity.line.online.OnLinePlayerItemMainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name=".activity.line.greatclass.GreatClassPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".activity.line.column.ColumnActivity" />
+        <activity android:name=".activity.line.column.ColumnInfoActivity" />
+        <activity android:name=".activity.line.column.FreeExperienceActivity" />
+        <activity android:name=".activity.line.column.BuySubscriptionActivity" />
+        <activity android:name=".activity.line.column.HasBuySubscriptionActivityActivity" />
+        <activity android:name=".activity.line.unline.LineDownMainActivity" />
+        <activity android:name=".activity.line.unline.LineDownInfoActivity" />
+        <activity android:name=".activity.line.MapActivity" />
+        <activity android:name=".activity.ChiefActivity" />
+        <activity android:name=".activity.message.TogetherChatActivity" />
+        <activity android:name=".activity.message.AddFriendsActivity" />
+        <activity android:name=".activity.message.FriendInfoActivity" />
+        <activity android:name=".activity.message.GroupChatActivity" />
+        <activity android:name=".activity.message.GroupInfoActivity" />
+        <activity android:name=".activity.message.SelectFriendsActivity" />
+        <activity android:name=".activity.message.InviteFriendsActivity" />
+        <activity android:name=".activity.contacts.NewFridensActivity" />
+        <activity android:name=".activity.contacts.AttentionActivity" />
+        <activity android:name=".activity.contacts.GroupChatAllActivity" />
+        <activity android:name=".activity.contacts.AddLableActivity" />
+        <activity android:name=".activity.contacts.SendDynamicActivity" />
+        <activity
+            android:name=".activity.contacts.CommentActivity"
+            android:windowSoftInputMode="adjustResize|adjustUnspecified|stateHidden" />
+        <activity android:name=".activity.mine.MineInfoActivity" />
+        <activity android:name=".activity.mine.IntroductionEditingActivity" />
+        <activity android:name=".activity.mine.CompanyInfoMainActivity" />
+        <activity android:name=".activity.mine.CompanyDetailsActivity" />
+        <activity android:name=".activity.mine.CollectionMineActivity" />
+        <activity android:name=".activity.mine.DynamicMineActivity" />
+        <activity android:name=".activity.mine.PurchaseHistoryActivity" />
+        <activity android:name=".activity.mine.ToBeMineActivity" />
+        <activity android:name=".activity.mine.ToBeTeacherActivity" />
+        <activity android:name=".activity.mine.ToBeBigCastActivity" />
+        <activity android:name=".activity.mine.ExchangeActivity" />
+        <activity android:name=".activity.mine.SettingsActivity" />
+        <activity android:name=".activity.mine.settings.AddFriendSettingActivity" />
+        <activity android:name=".activity.mine.settings.AccountSettingActivity" />
+        <activity android:name=".activity.mine.settings.ChangePhoneNumberActivity" />
+        <activity android:name=".activity.mine.settings.ExchangePhoneNumberActivity" />
+        <activity android:name=".activity.mine.settings.AboutAppInfoActivity" />
+        <activity android:name=".activity.mine.settings.FeedBackActivity" />
+        <activity android:name=".activity.personal.DetailedInfoActivity" />
+        <activity android:name=".activity.personal.PersonalContentActivity" />
+        <activity android:name=".activity.personal.RemarksActivity" />
+        <activity android:name=".activity.personal.FriendVerificationActivity" />
+
+        <receiver android:name=".util.NetBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/single_white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_top_line_gd"
+        android:layout_width="1dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="-3dp"
+        android:layout_marginLeft="17dp"
+        android:background="@color/single_green"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/shape_hollow_circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="提供UI设计服务"
+            android:textColor="@color/text_user"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_bottom_line_gd"
+        android:layout_width="1dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="-3dp"
+        android:background="@color/single_green"></View>
+
+</LinearLayout>

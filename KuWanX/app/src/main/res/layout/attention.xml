@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/bgm_white">
+
+    <TextView
+        android:id="@+id/tvUnSubscribe"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="#FFDA44"
+        android:gravity="center"
+        android:clickable="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="取消关注"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+</RelativeLayout>

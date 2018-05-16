@@ -1,0 +1,258 @@
+[
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\test_dynamic_info.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\test_dynamic_info.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\pay_wechat_selected.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\pay_wechat_selected.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\player_icon_unlock.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\player_icon_unlock.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\player_share.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\player_share.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\pay_ali_unselected.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\pay_ali_unselected.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\menu_bgm.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\menu_bgm.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\talk_seleted.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\talk_seleted.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\player_collection.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\player_collection.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\rectangle_green_info.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\rectangle_green_info.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\types_seleted.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\types_seleted.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\location_unline.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\location_unline.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\audio_next_none.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\audio_next_none.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\guide_background.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\guide_background.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\player_start.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\player_start.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\item_trade_right_unselect.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\item_trade_right_unselect.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\types_unseleted.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\types_unseleted.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\share_audio.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\share_audio.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\send_friends_menu.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\send_friends_menu.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\add_group_people.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\add_group_people.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\player_icon_lock.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\player_icon_lock.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\audio_last_has.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\audio_last_has.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\audio_seleceted.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\audio_seleceted.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\has_attention.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\has_attention.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\search_friends_icon.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\search_friends_icon.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\player_full_screen.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\player_full_screen.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\pay_wechat_unselected.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\pay_wechat_unselected.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\pay_ali_selected.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\pay_ali_selected.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\talk_unseleted.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\talk_unseleted.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\audio_next_has.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\audio_next_has.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\icon_search_view_down.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\icon_search_view_down.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\audio_last_none.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\audio_last_none.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\add_attention.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\add_attention.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\return_meida_player.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\return_meida_player.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\group_chat_icon.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\group_chat_icon.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\player_small_screen.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\player_small_screen.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\clear_text.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\clear_text.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\test_photo.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\test_photo.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher_round.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\togeter_chat_menu.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\togeter_chat_menu.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\class_unseleted.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\class_unseleted.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\item_trade_right_select.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\item_trade_right_select.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\audio_start.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\audio_start.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\seekbar_thumb.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\seekbar_thumb.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\column_info.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\column_info.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\notice_column.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\notice_column.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\add_friend_menu.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\add_friend_menu.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\vedio_unseleted.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\vedio_unseleted.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\share_wechat.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\share_wechat.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\player_audience.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\player_audience.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\player_reward.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\player_reward.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\class_seleted.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\class_seleted.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\consult_now_unline.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\consult_now_unline.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\enjoy_icon.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\enjoy_icon.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\audio_unseleceted.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\audio_unseleceted.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\player_collection_audio.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\player_collection_audio.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\banner.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\banner.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\share_friends.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\share_friends.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\add_menu.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\add_menu.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\flash_back.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\flash_back.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\audio_pause.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\audio_pause.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\player_pause.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\player_pause.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\eye_green.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\eye_green.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\select_all.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xhdpi\\select_all.png"
+    }
+]

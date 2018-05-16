@@ -1,0 +1,87 @@
+package com.tch.zx.activity.mine;
+
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.activity.BaseActivity;
+import com.tch.zx.adapter.mine.DynamicMineAdapter;
+import com.tch.zx.adapter.mine.PurchaseHistoryAdapter;
+import com.tch.zx.view.RecyclerViewDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 购买记录
+ */
+public class PurchaseHistoryActivity extends BaseActivity {
+
+    /**
+     * 标题内容
+     */
+    @BindView(R.id.tv_title_top_all)
+    TextView tv_title_top_all;
+    /**
+     * 数据列表
+     */
+    @BindView(R.id.rv_purchase_history_mine_main)
+    RecyclerView rv_purchase_history_mine_main;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_purchase_history);
+        ButterKnife.bind(this);
+
+        initView();
+    }
+
+    /**
+     * 初始化
+     */
+    private void initView() {
+        tv_title_top_all.setText("购买记录");
+        setRecyclerViewData();
+    }
+
+    /**
+     * 加载购买记录列表数据
+     */
+    private void setRecyclerViewData() {
+
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 9; i++) {
+            list.add("");
+        }
+
+        PurchaseHistoryAdapter purchaseHistoryAdapter = new PurchaseHistoryAdapter(this, list);
+        rv_purchase_history_mine_main.setLayoutManager(new LinearLayoutManager(this));
+        //设置分割线
+        rv_purchase_history_mine_main.addItemDecoration(new RecyclerViewDecoration(this, "#EAEAEA", 1, false));
+        rv_purchase_history_mine_main.setAdapter(purchaseHistoryAdapter);
+    }
+
+    /**
+     * 返回
+     */
+    @OnClick(R.id.ll_return_back_top_all)
+    public void returnPurchaseHistory() {
+        this.finish();
+    }
+}

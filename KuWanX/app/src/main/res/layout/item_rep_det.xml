@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_white"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/ivItemRepDetUserPhoto_"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvRepDetName_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="姓名"
+            android:textColor="@color/text_three"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvRepDetContent_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="内容"
+            android:textColor="@color/text_three"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvRepDetTime_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="时间"
+            android:textColor="@color/text_prompt"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

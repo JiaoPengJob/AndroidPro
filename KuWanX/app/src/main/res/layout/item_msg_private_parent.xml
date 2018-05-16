@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tubb.smrv.SwipeHorizontalMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:background="@color/base_white">
+
+    <include
+        android:id="@id/smContentView"
+        layout="@layout/item_msg_private_chat" />
+
+    <include
+        android:id="@id/smMenuViewRight"
+        layout="@layout/delete" />
+
+</com.tubb.smrv.SwipeHorizontalMenuLayout>

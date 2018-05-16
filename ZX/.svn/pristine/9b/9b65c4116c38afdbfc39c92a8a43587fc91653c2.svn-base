@@ -1,0 +1,126 @@
+package com.tch.zx.fragment.mine;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+
+import com.tch.zx.R;
+import com.tch.zx.activity.mine.CollectionMineActivity;
+import com.tch.zx.activity.mine.CompanyInfoMainActivity;
+import com.tch.zx.activity.mine.DynamicMineActivity;
+import com.tch.zx.activity.mine.ExchangeActivity;
+import com.tch.zx.activity.mine.MineInfoActivity;
+import com.tch.zx.activity.mine.PurchaseHistoryActivity;
+import com.tch.zx.activity.mine.SettingsActivity;
+import com.tch.zx.activity.mine.ToBeMineActivity;
+import com.tch.zx.view.GoTopScrollView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 我的主页
+ */
+
+public class MineMainFragment extends Fragment {
+
+    //Fragment父布局
+    private View viewRoot;
+
+    //跳转
+    private Intent intent;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        //获取父布局View
+        viewRoot = inflater.inflate(R.layout.fragment_mine_main, container, false);
+        //初始化ButterKnife
+        ButterKnife.bind(this, viewRoot);
+
+        return viewRoot;
+    }
+
+    /**
+     * 编辑
+     */
+    @OnClick(R.id.iv_edit_my_info)
+    public void editMyInfo() {
+        intent = new Intent(getContext(), MineInfoActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 我的公司
+     */
+    @OnClick(R.id.rl_intent_mine_company)
+    public void intentMyCompany() {
+        intent = new Intent(getContext(), CompanyInfoMainActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 我的收藏
+     */
+    @OnClick(R.id.rl_intent_mine_collection)
+    public void intentCollection() {
+        intent = new Intent(getContext(), CollectionMineActivity.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     * 我的动态
+     */
+    @OnClick(R.id.rl_intent_mine_dynamic)
+    public void intentDynamic() {
+        intent = new Intent(getContext(), DynamicMineActivity.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     * 购买记录
+     */
+    @OnClick(R.id.rl_intent_mine_purchase_history)
+    public void intentPurchaseHistory() {
+        intent = new Intent(getContext(), PurchaseHistoryActivity.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     * 我要成为
+     */
+    @OnClick(R.id.rl_intent_mine_want_to_be)
+    public void intentToBe() {
+        intent = new Intent(getContext(), ToBeMineActivity.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     * 兑换码
+     */
+    @OnClick(R.id.rl_intent_mine_exchange)
+    public void intentExchange() {
+        intent = new Intent(getContext(), ExchangeActivity.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     * 设置
+     */
+    @OnClick(R.id.rl_intent_mine_settings)
+    public void intentSettings() {
+        intent = new Intent(getContext(), SettingsActivity.class);
+        startActivity(intent);
+    }
+}

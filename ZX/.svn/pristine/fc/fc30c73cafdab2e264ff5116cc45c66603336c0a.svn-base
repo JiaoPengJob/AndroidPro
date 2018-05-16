@@ -1,0 +1,152 @@
+package com.tch.zx.fragment.contacts;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.activity.contacts.AttentionActivity;
+import com.tch.zx.activity.contacts.GroupChatAllActivity;
+import com.tch.zx.activity.contacts.NewFridensActivity;
+import com.tch.zx.activity.personal.DetailedInfoActivity;
+import com.tch.zx.activity.personal.PersonalContentActivity;
+import com.tch.zx.adapter.contacts.AddressBookAdapter;
+import com.tch.zx.bean.CityBean;
+import com.tch.zx.view.IndexBar;
+import com.tch.zx.view.RecyclerViewDecoration;
+import com.tubb.smrv.SwipeMenuRecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 人脉/通讯录
+ */
+
+public class AddressBookFragment extends Fragment {
+
+    private View viewRoot;
+    /**
+     * 联系人列表
+     */
+    @BindView(R.id.rvList)
+    SwipeMenuRecyclerView rvList;
+    /**
+     * 侧边索引栏
+     */
+    @BindView(R.id.indexBar)
+    IndexBar indexBar;
+    /**
+     * 点击索引栏提示信息
+     */
+    @BindView(R.id.tvSideBarHint)
+    TextView tvSideBarHint;
+    /**
+     * 联系人列表适配器
+     */
+    private AddressBookAdapter addressBookAdapter;
+    /**
+     * 加载侧边栏信息
+     */
+    private List<CityBean> mDatas;
+    private LinearLayoutManager mManager;
+    /**
+     * 跳转
+     */
+    private Intent intent;
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //获取父布局View
+        viewRoot = inflater.inflate(R.layout.fragment_address_book, container, false);
+        //初始化ButterKnife
+        ButterKnife.bind(this, viewRoot);
+
+        serAddressBookList();
+
+        return viewRoot;
+    }
+
+    /**
+     * 加载联系人列表数据
+     */
+    private void serAddressBookList() {
+
+        mDatas = new ArrayList<CityBean>();
+        mDatas.add(new CityBean("阿卡丽"));
+        mDatas.add(new CityBean("北大"));
+        mDatas.add(new CityBean("觉得拉"));
+        mDatas.add(new CityBean("记录"));
+        mDatas.add(new CityBean("理解法"));
+        mDatas.add(new CityBean("迷人"));
+        mDatas.add(new CityBean("欧赔打"));
+        mDatas.add(new CityBean("软购房"));
+        mDatas.add(new CityBean("木木"));
+        mDatas.add(new CityBean("回复都"));
+        mDatas.add(new CityBean("去"));
+        mDatas.add(new CityBean("五"));
+        mDatas.add(new CityBean("儿"));
+        mDatas.add(new CityBean("图"));
+        mDatas.add(new CityBean("gu"));
+        mDatas.add(new CityBean("怒"));
+        mDatas.add(new CityBean("咯"));
+        mDatas.add(new CityBean("v"));
+
+        addressBookAdapter = new AddressBookAdapter(getContext(), mDatas);
+        rvList.setLayoutManager(mManager = new LinearLayoutManager(getContext()));
+        //设置分割线
+        rvList.addItemDecoration(new RecyclerViewDecoration(getContext(), "#EAEAEA", 1, false));
+        rvList.setAdapter(addressBookAdapter);
+        addressBookAdapter.setOnItemClickListener(new AddressBookAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                intent = new Intent(getContext(), DetailedInfoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        indexBar.setmPressedShowTextView(tvSideBarHint)//设置HintTextView
+                .setNeedRealIndex(true)//设置需要真实的索引
+                .setmLayoutManager(mManager)//设置RecyclerView的LayoutManager
+                .setmSourceDatas(mDatas);//设置数据源
+    }
+
+    /**
+     * 新朋友点击事件
+     */
+    @OnClick(R.id.rl_new_friends_contacts)
+    public void newFriends() {
+        intent = new Intent(getContext(), NewFridensActivity.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     * 关注点击事件
+     */
+    @OnClick(R.id.rl_attention_contacts)
+    public void attentionClick() {
+        intent = new Intent(getContext(), AttentionActivity.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     * 群聊点击事件
+     */
+    @OnClick(R.id.rl_group_chat)
+    public void groupChatClick() {
+        intent = new Intent(getContext(), GroupChatAllActivity.class);
+        startActivity(intent);
+    }
+}

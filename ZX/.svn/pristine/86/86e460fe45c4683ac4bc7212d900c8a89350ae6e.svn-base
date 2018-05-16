@@ -1,0 +1,306 @@
+[
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bottom_tab_mine.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\selector_bottom_tab_mine.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_corner_white.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_corner_white.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bottom_tab_message.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\selector_bottom_tab_message.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\line_un_select.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\line_un_select.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_corner_green.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_corner_green.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\drawable\\navigation_empty_icon.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\border_item_trade_left_seleted.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\border_item_trade_left_seleted.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mine_select.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\mine_select.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_corner_border_green_bgm_white.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_corner_border_green_bgm_white.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\friend_select.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\friend_select.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_corner_look_all.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_corner_look_all.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_item_search_history.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_item_search_history.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_popup_share.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_popup_share.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\border_ll_right.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\border_ll_right.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bottom_tab_line.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\selector_bottom_tab_line.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\drawable\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_circle_textview.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_circle_textview.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_talk_edit.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_talk_edit.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\border_item_trade_left_unseleted.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\border_item_trade_left_unseleted.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_corner_dialog_culomn.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_corner_dialog_culomn.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_smart_tab.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\selector_smart_tab.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_password_eye.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\drawable\\design_password_eye.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\message_select.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\message_select.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\message_un_select.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\message_un_select.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\friend_un_select.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\friend_un_select.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_corner.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_corner.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\white_radius.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\white_radius.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mine_un_select.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\mine_un_select.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\seekbar_style.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\seekbar_style.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_clear_data.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_clear_data.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_corner_background_green.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_corner_background_green.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\line_select.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\line_select.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_isplaying_online.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_isplaying_online.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bottom_tab_text.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\selector_bottom_tab_text.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_search.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\shape_search.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_bottom_tab_friend.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\drawable\\selector_bottom_tab_friend.xml"
+    }
+]

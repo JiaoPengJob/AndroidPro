@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\guide_background.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xxxhdpi\\guide_background.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher_round.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    }
+]

@@ -1,0 +1,97 @@
+package com.tch.zx.activity.message;
+
+import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
+
+import com.lqr.ninegridimageview.LQRNineGridImageViewAdapter;
+import com.tch.zx.R;
+import com.tch.zx.activity.ChiefActivity;
+import com.tch.zx.adapter.message.ReceiveMsgAdapter;
+import com.tch.zx.view.ItemRemoveRecyclerView;
+import com.tch.zx.view.OnItemClickListener;
+import com.tch.zx.view.RecyclerViewDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+import static com.baidu.mapapi.BMapManager.getContext;
+
+/**
+ * 群聊消息提醒页面
+ */
+public class TogetherChatActivity extends AppCompatActivity {
+
+    //数据列表
+    @BindView(R.id.irrv_together_msg_receive)
+    ItemRemoveRecyclerView irrv_together_msg_receive;
+
+    //适配器
+    private ReceiveMsgAdapter receiveMsgAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_together_chat);
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+
+        setData();
+    }
+
+    /**
+     * 加载列表数据
+     */
+    private void setData() {
+        List<String> list = new ArrayList<String>();
+        list.add("123");
+        list.add("123");
+
+        receiveMsgAdapter = new ReceiveMsgAdapter(getContext(), list, 1);
+        irrv_together_msg_receive.setLayoutManager(new LinearLayoutManager(getContext()));
+        //设置分割线
+        irrv_together_msg_receive.addItemDecoration(new RecyclerViewDecoration(getContext(), "#EAEAEA", 1, false));
+        irrv_together_msg_receive.setAdapter(receiveMsgAdapter);
+        irrv_together_msg_receive.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(TogetherChatActivity.this,GroupChatActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onDeleteClick(int position) {
+                receiveMsgAdapter.removeItem(position);
+            }
+        });
+    }
+
+
+    /**
+     * 标题栏后退
+     */
+    @OnClick(R.id.ll_together_msg_title_return)
+    public void returnBack() {
+        TogetherChatActivity.this.finish();
+    }
+}

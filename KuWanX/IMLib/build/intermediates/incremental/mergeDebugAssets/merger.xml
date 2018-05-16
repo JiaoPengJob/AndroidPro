@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="F:\AndroidSpaces\KuWanX\IMLib\src\main\assets"/><source path="F:\AndroidSpaces\KuWanX\IMLib\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="F:\AndroidSpaces\KuWanX\IMLib\src\debug\assets"/></dataSet></merger>

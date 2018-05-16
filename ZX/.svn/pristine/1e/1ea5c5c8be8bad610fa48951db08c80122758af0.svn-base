@@ -1,0 +1,40 @@
+package com.tch.zx.application;
+
+import android.app.Application;
+
+import com.baidu.mapapi.SDKInitializer;
+import com.tch.zx.dao.green.DaoMaster;
+import com.tch.zx.dao.green.DaoSession;
+
+import org.greenrobot.greendao.database.Database;
+
+/**
+ * Application应用文件
+ */
+
+public class MyApplication extends Application {
+
+    //数据库session类
+    private DaoSession daoSession;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        //链接或创建数据库
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, false ? "search_history_encrypted" : "search_history");
+        Database db = false ? helper.getEncryptedWritableDb("super_secret") : helper.getWritableDb();
+        daoSession = new DaoMaster(db).newSession();
+        //在使用SDK各组件之前初始化context信息，传入ApplicationContext
+        //注意该方法要在setContentView方法之前实现
+        SDKInitializer.initialize(getApplicationContext());
+    }
+
+    /**
+     * 获取数据库session
+     *
+     * @return
+     */
+    public DaoSession getDaoSession() {
+        return daoSession;
+    }
+}

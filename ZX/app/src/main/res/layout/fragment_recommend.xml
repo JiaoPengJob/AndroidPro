@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/refreshLayout_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tch.zx.view.GoTopScrollView
+            android:id="@+id/goto_top_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EDEDED">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewpager_custom_recommend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="130dp"
+                        app:ci_animator="@animator/indicator_animator"
+                        app:ci_animator_reverse="@animator/indicator_animator_reverse"
+                        app:ci_drawable="@drawable/white_radius"
+                        app:ci_height="6dp"
+                        app:ci_margin="6dp"
+                        app:ci_width="12dp" />
+                </RelativeLayout>
+
+                <include layout="@layout/choose_project_recomment"></include>
+
+                <include layout="@layout/hot_online_player_recomment"></include>
+
+                <include layout="@layout/fine_little_class"></include>
+
+                <include layout="@layout/column_subscription"></include>
+
+                <include layout="@layout/hot_list_top"></include>
+
+            </LinearLayout>
+
+        </com.tch.zx.view.GoTopScrollView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <ImageView
+        android:id="@+id/iv_return_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/goto_top"
+        android:visibility="gone" />
+</RelativeLayout>

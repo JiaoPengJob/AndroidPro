@@ -1,0 +1,70 @@
+package com.tch.zx.activity.mine;
+
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+
+import com.tch.zx.R;
+import com.tch.zx.view.DynamicPhotoPopupWindow;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 公司详情
+ */
+public class CompanyDetailsActivity extends AppCompatActivity {
+
+    //父布局
+    @BindView(R.id.ll_parent_company_details)
+    LinearLayout ll_parent_company_details;
+
+    //设置popupwindow的布局参数
+    private WindowManager.LayoutParams params;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_company_details);
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+    }
+
+    /**
+     * 选择图片
+     */
+    @OnClick({R.id.rl_choose_upload_photo, R.id.rl_choose_upload_video})
+    public void chooseUploadPhoto() {
+        DynamicPhotoPopupWindow rewardPopupWindow = new DynamicPhotoPopupWindow(this);
+        //设置Popupwindow显示位置（从底部弹出）
+        rewardPopupWindow.showAtLocation(ll_parent_company_details, Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+        params = getWindow().getAttributes();
+        //当弹出Popupwindow时，背景变半透明
+        params.alpha = 0.7f;
+        getWindow().setAttributes(params);
+        //设置Popupwindow关闭监听，当Popupwindow关闭，背景恢复1f
+        rewardPopupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                params = getWindow().getAttributes();
+                params.alpha = 1f;
+                getWindow().setAttributes(params);
+            }
+        });
+    }
+}

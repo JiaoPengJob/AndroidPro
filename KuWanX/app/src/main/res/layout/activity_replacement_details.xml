@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlRepDetParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.tch.kuwanx.ui.home.ReplacementDetailsActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title"></include>
+
+    <RelativeLayout
+        android:id="@+id/rlRepDetBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btRepDetReplacement"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/oval_replacement_button"
+            android:text="置换"
+            android:textColor="#333333"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivRepDetZan"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/item_zan_unsel" />
+
+            <TextView
+                android:id="@+id/tvRepDetZan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="(0)"
+                android:textColor="#7D7B7B"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/ivRepDetComment"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/item_comment" />
+
+            <TextView
+                android:id="@+id/tvRepDetComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:text="(0)"
+                android:textColor="#7D7B7B"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/ivRepDetCollection"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/item_collection" />
+
+            <ImageView
+                android:id="@+id/ivRepDetShare"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/item_share" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshRepDet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlRepDetBottomView"
+        android:layout_below="@+id/title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.tch.kuwanx.view.SuspensionScrollView
+                android:id="@+id/ssvRepDet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llRepDetTopView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#FFFFFF">
+
+                            <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/repDetBanner"
+                                android:layout_width="match_parent"
+                                android:layout_height="260dp"
+                                app:indicator_drawable_selected="@drawable/banner_selected"
+                                app:indicator_drawable_unselected="@drawable/banner_unselected"
+                                app:indicator_height="5dp"
+                                app:indicator_width="5dp" />
+
+                            <ImageView
+                                android:id="@+id/rivRepDetUserPhoto"
+                                android:layout_width="66dp"
+                                android:layout_height="66dp"
+                                android:layout_below="@+id/repDetBanner"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="-25dp"
+                                android:scaleType="fitXY" />
+
+                            <TextView
+                                android:id="@+id/tvRepDetUserName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/repDetBanner"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_toRightOf="@+id/rivRepDetUserPhoto"
+                                android:text="姓名"
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvRepDetUserName"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_toRightOf="@+id/rivRepDetUserPhoto">
+
+                                <TextView
+                                    android:id="@+id/tvRepDetUserLoc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="地址"
+                                    android:textColor="#B1B1B1"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tvRepDetUserTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="8dp"
+                                    android:text="时间"
+                                    android:textColor="#B1B1B1"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvRepDetContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="12dp"
+                            android:text="多行内容"
+                            android:textColor="#808080"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/base_white"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="我想要换的物品："
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tvRepDetMyRes"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="#B1B1B1"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1.5dp"
+                            android:background="#FFFFFF"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="我愿意付的押金："
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tvRepDetMyPrice"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="#B1B1B1"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1.5dp"
+                            android:background="#FFFFFF"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="我想要置换的周期："
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tvRepDetMyDate"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="#B1B1B1"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1.5dp"
+                            android:background="#FFFFFF"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="置换的交货细节："
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tvRepDetChangeDetail"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="#B1B1B1"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1.5dp"
+                            android:background="#FFFFFF"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="置换物品地点："
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tvRepDetChangeArea"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="#B1B1B1"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1.5dp"
+                            android:background="#FFFFFF"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="最低匹配押金："
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tvRepDetLowPrice"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="6dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="#B1B1B1"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llRepDetCenterView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="5dp"
+                            android:background="#F2F2F2"></View>
+
+                        <com.tch.kuwanx.view.EasyIndicator
+                            android:id="@+id/repDetIndicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:indicator_bottom_height="2dp"
+                            app:indicator_bottom_line_color="#DAD9D9"
+                            app:indicator_bottom_line_height="0.5dp"
+                            app:indicator_height="40dp"
+                            app:indicator_isBottom_line="true"
+                            app:indicator_line_color="@color/base_yellow"
+                            app:indicator_normal_color="#000000"
+                            app:indicator_selected_color="@color/base_yellow"
+                            app:indicator_textSize="14sp"
+                            app:indicator_vertical_line_w="0dp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlRepDetLeaveData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvRepDetLeaveData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlRepDetData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvRepDetData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </com.tch.kuwanx.view.SuspensionScrollView>
+
+        </RelativeLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/llRepDetPseudoCenterView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@color/base_white"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:background="@color/bgm_white"></View>
+
+        <com.tch.kuwanx.view.EasyIndicator
+            android:id="@+id/repDetIndicatorBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:indicator_bottom_height="2dp"
+            app:indicator_bottom_line_color="@color/base_line"
+            app:indicator_bottom_line_height="0.5dp"
+            app:indicator_height="40dp"
+            app:indicator_isBottom_line="true"
+            app:indicator_line_color="@color/base_yellow"
+            app:indicator_normal_color="#000000"
+            app:indicator_selected_color="@color/base_yellow"
+            app:indicator_textSize="14sp"
+            app:indicator_vertical_line_w="0dp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewRepDetDark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:background="#80000000"
+        android:visibility="gone"></View>
+
+</RelativeLayout>

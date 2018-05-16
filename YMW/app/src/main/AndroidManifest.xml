@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tch.youmuwa">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="com.tch.youmuwa.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ymw"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ymw"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="L4BVeB0okhpPVrqfpDaQsnT6kv94Se1d" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="597ea7ba2ae85b53a400096c" />
+
+        <activity android:name=".ui.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.login.GuideActivity" />
+        <activity android:name=".ui.activity.login.LoginActivity" />
+        <activity android:name=".ui.activity.login.RegisterActivity" />
+        <activity android:name=".ui.activity.login.TermsServiceContentActivity" />
+        <activity android:name=".ui.activity.login.WorkerPerfectDataActivity" />
+        <activity android:name=".ui.activity.login.BindPhoneActivity" />
+        <activity android:name=".ui.activity.login.ForgetPwdActivity" />
+        <activity android:name=".ui.activity.employer.EmployerActivity" />
+        <activity android:name=".ui.activity.employer.SwitchCityActivity" />
+        <activity android:name=".ui.activity.employer.SearchActivity" />
+        <activity android:name=".ui.activity.employer.WorkerInfoActivity">
+            <intent-filter>
+                <data android:scheme="com.tch.youmuwa" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.employer.PlaceOrderActivity" />
+        <activity android:name=".ui.activity.employer.AreaManagerActivity" />
+        <activity android:name=".ui.activity.employer.AddAreaActivity" />
+        <activity android:name=".ui.activity.employer.OrderCenterActivity" />
+        <activity android:name=".ui.activity.employer.ReleaseOrderActivity" />
+        <activity android:name=".ui.activity.employer.OrderDetailsActivity" />
+        <activity android:name=".ui.activity.mine.MineDataActivity" />
+        <activity android:name=".ui.activity.mine.SettingPwdActivity" />
+        <activity android:name=".ui.activity.mine.TransactionDetailsActivity" />
+        <activity android:name=".ui.activity.mine.SettingsActivity" />
+        <activity android:name=".ui.activity.mine.FeedbackActivity" />
+        <activity android:name=".ui.activity.employer.PayConfirmActivity" />
+        <activity android:name=".ui.activity.employer.OrderCancelActivity" />
+        <activity android:name=".ui.activity.employer.DismissReasonActivity" />
+        <activity android:name=".ui.activity.employer.OrderEvaluationActivity" />
+        <activity android:name=".ui.activity.mine.PerfectDataActivity" />
+        <activity android:name=".ui.activity.employer.MessageCenterActivity" />
+        <activity android:name=".ui.activity.worker.WorkerMainActivity" />
+        <activity android:name=".ui.activity.worker.WorkerOrderInfoActivity" />
+        <activity android:name=".ui.activity.worker.ActualWageActivity" />
+        <activity android:name=".ui.activity.worker.WageSettlementActivity" />
+        <activity android:name=".ui.activity.worker.WalletActivity" />
+        <activity android:name=".ui.activity.worker.UpdateWithdrawPwdActivity" />
+        <activity android:name=".ui.activity.worker.WithdrawActivity" />
+        <activity android:name=".ui.activity.worker.OpenBankActivity" />
+        <activity android:name=".ui.activity.worker.BindBankCardActivity" />
+        <activity android:name=".ui.activity.employer.RejectSingleActivity" />
+        <activity android:name=".ui.activity.worker.WorkerMineDataActivity" />
+        <activity android:name=".ui.activity.worker.WorkerAreaMangerActivity" />
+        <activity android:name=".ui.activity.worker.WorkerGoodAtActivity" />
+        <activity android:name=".ui.activity.worker.UpWithdrawPwdActivity" />
+        <activity android:name=".ui.activity.worker.BindTheBankCardActivity" />
+        <activity android:name=".ui.activity.worker.WorkerTDActivity" />
+        <activity android:name=".ui.activity.worker.WorkerDemandDetailsActivity" />
+        <activity android:name=".ui.activity.worker.WorkerSearchActivity" />
+        <activity android:name=".ui.activity.worker.RejectSingleReasonActivity" />
+        <activity android:name=".ui.activity.worker.HasReceivedOrdersActivity" />
+        <activity android:name=".ui.activity.worker.PointWageActivity" />
+        <activity android:name=".ui.activity.worker.ProjectValuationActivity" />
+        <activity android:name=".ui.activity.employer.ImageLookActivity" />
+
+        <!-- 微信 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 新浪微博 -->
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- qq精简版 -->
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 这里的scheme是qq分享要用的，100424468为自己申请的appid，真实项目中需要替换 -->
+                <data android:scheme="tencent101419394" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <service android:name=".service.LocationService" />
+        <service android:name=".service.MessageService" />
+
+        <activity android:name=".ui.activity.employer.MsgInfoActivity" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+
+        <receiver
+            android:name=".broadcastreceiver.JPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.tch.youmuwa" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.tch.youmuwa.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+    </application>
+
+</manifest>

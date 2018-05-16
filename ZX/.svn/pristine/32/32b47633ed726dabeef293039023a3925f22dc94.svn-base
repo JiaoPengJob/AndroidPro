@@ -1,0 +1,21 @@
+package com.tch.zx.util;
+
+/**
+ * 用于存放静态常量
+ */
+
+public class ConstantData {
+
+    //随便看看的登录状态
+    public static final String LOGIN_TYPE_CASUALSEE = "00";
+
+    //正常登录状态
+    public static final String LOGIN_TYPE_LOGINED = "01";
+
+    //获取验证码handler的message
+    public static final int HANDLER_MESSAGE_CODE_REGISTER = 100;
+
+    //获取验证码计时器停止handler的message
+    public static final int HANDLER_MESSAGE_CODE_REGISTER_STOP = 101;
+
+}

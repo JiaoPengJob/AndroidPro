@@ -1,0 +1,272 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:2:1-69:12
+	package
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:3:5-25
+		INJECTED from F:\SVN\ZX\app\src\main\AndroidManifest.xml
+		INJECTED from F:\SVN\ZX\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from F:\SVN\ZX\app\src\main\AndroidManifest.xml
+		INJECTED from F:\SVN\ZX\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from F:\SVN\ZX\app\src\main\AndroidManifest.xml
+		INJECTED from F:\SVN\ZX\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.WAKE_LOCK
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:6:5-68
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:6:22-65
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:8:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:9:5-76
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:9:22-73
+uses-permission#android.permission.CALL_PHONE
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:10:5-69
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:10:22-66
+uses-permission#com.android.launcher.permission.READ_SETTINGS
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:11:5-85
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:11:22-82
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:12:5-76
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:12:22-73
+uses-permission#android.permission.GET_TASKS
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:13:5-68
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:13:22-65
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:14:5-73
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:14:22-70
+application
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:16:5-67:19
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\peng\.android\build-cache\21e9ea421e4e9f1aaa055134bb7a0096663342f7\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\peng\.android\build-cache\d99e41069f9ce920f6c52ad3b924f754f2b8ba96\output\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\peng\.android\build-cache\996f6581f0f120f1a9f64debc53b1df55fa2738e\output\AndroidManifest.xml:9:5-20
+MERGED from [tv.danmaku.ijk.media:ijkplayer-exo:0.8.0] C:\Users\peng\.android\build-cache\784d826bbe218a42e163109e80779d3d7578ca16\output\AndroidManifest.xml:9:5-13:19
+MERGED from [com.lqr.ninegridimageview:library:1.0.0] C:\Users\peng\.android\build-cache\40ed6143a27c5090ae59743d0738a3d71eba02a2\output\AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\peng\.android\build-cache\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\peng\.android\build-cache\6b60dc327bbddf313f7ddb3145fb02de3cdbef69\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\peng\.android\build-cache\d5867bde12edb9295c53c27171c20fab5514b100\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\peng\.android\build-cache\ccf9959b4e2ccec246421cde4f3acf98bae5e7fc\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\peng\.android\build-cache\bbf0b859f409205bd762efb896ede0da65f2dc5e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\peng\.android\build-cache\5581feb7cac7a12fdfef5142b5cbd1e2f318892a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\peng\.android\build-cache\a444308a4967ac3ae0c4c49412e6f4aef8ed9f18\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\peng\.android\build-cache\577d85d07c9e3b7a1f5bb4c4450f174c7dc97016\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\peng\.android\build-cache\150bfda57db0f7a29043476ce1ac6be3de77833f\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:20:9-41
+	android:supportsRtl
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:22:9-35
+	android:roundIcon
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:21:9-54
+	android:allowBackup
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:18:9-35
+	android:icon
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:19:9-43
+	android:theme
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:23:9-40
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:17:9-50
+meta-data#com.baidu.lbsapi.API_KEY
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:24:9-26:64
+	android:value
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:26:13-61
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:25:13-52
+activity#com.tch.zx.activity.line.MainActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:28:9-64
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:28:19-61
+activity#com.tch.zx.activity.login_register.GuideActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:29:9-75
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:29:19-72
+activity#com.tch.zx.activity.login_register.RegisterActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:30:9-78
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:30:19-75
+activity#com.tch.zx.activity.login_register.RegisterSureActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:31:9-82
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:31:19-79
+activity#com.tch.zx.activity.login_register.WechatLoginActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:32:9-81
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:32:19-78
+activity#com.tch.zx.activity.login_register.PhoneLoginActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:33:9-80
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:33:19-77
+activity#com.tch.zx.activity.login_register.FindPasswordBackActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:34:9-86
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:34:19-83
+activity#com.tch.zx.activity.line.SearchMainActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:35:9-70
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:35:19-67
+activity#com.tch.zx.activity.line.PurchasedActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:36:9-69
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:36:19-66
+activity#com.tch.zx.activity.line.TopListActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:37:9-67
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:37:19-64
+activity#com.tch.zx.activity.login_register.TradeActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:38:9-75
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:38:19-72
+activity#com.tch.zx.activity.line.online.OnLinePlayerMainActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:39:9-83
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:39:19-80
+activity#com.tch.zx.activity.line.greatclass.GreatClassMainActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:40:9-85
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:40:19-82
+activity#com.tch.zx.activity.line.online.OnLinePlayerItemMainActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:41:9-43:77
+	android:configChanges
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:43:13-74
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:42:13-78
+activity#com.tch.zx.activity.line.greatclass.GreatClassPlayerActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:44:9-46:77
+	android:configChanges
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:46:13-74
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:45:13-78
+activity#com.tch.zx.activity.line.column.ColumnActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:47:9-73
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:47:19-70
+activity#com.tch.zx.activity.line.column.ColumnInfoActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:48:9-77
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:48:19-74
+activity#com.tch.zx.activity.line.column.FreeExperienceActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:49:9-81
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:49:19-78
+activity#com.tch.zx.activity.line.column.BuySubscriptionActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:50:9-82
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:50:19-79
+activity#com.tch.zx.activity.line.column.HasBuySubscriptionActivityActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:51:9-93
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:51:19-90
+activity#com.tch.zx.activity.line.unline.LineDownMainActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:52:9-79
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:52:19-76
+activity#com.tch.zx.activity.line.unline.LineDownInfoActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:53:9-79
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:53:19-76
+activity#com.tch.zx.activity.line.MapActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:54:9-63
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:54:19-60
+activity#com.tch.zx.activity.ChiefActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:55:9-61:20
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:55:19-57
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:56:13-60:29
+action#android.intent.action.MAIN
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:57:17-69
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:57:25-66
+category#android.intent.category.LAUNCHER
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:59:17-77
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:59:27-74
+activity#com.tch.zx.activity.message.TogetherChatActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:62:9-75
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:62:19-72
+activity#com.tch.zx.activity.message.AddFriendsActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:63:9-73
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:63:19-70
+activity#com.tch.zx.activity.message.FriendInfoActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:64:9-73
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:64:19-70
+activity#com.tch.zx.activity.message.GroupChatActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:65:9-72
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:65:19-69
+activity#com.tch.zx.activity.message.GroupInfoActivity
+ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:66:9-81
+	android:name
+		ADDED from F:\SVN\ZX\app\src\main\AndroidManifest.xml:66:19-69
+uses-sdk
+INJECTED from F:\SVN\ZX\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\peng\.android\build-cache\784b5004836d897aa266ff98f7a56de5df654bd3\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\peng\.android\build-cache\21e9ea421e4e9f1aaa055134bb7a0096663342f7\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\peng\.android\build-cache\d99e41069f9ce920f6c52ad3b924f754f2b8ba96\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.jakewharton:butterknife:8.6.0] C:\Users\peng\.android\build-cache\a37963ff5357c08fc74cf066d1735cf9abf8cccf\output\AndroidManifest.xml:5:5-43
+MERGED from [me.relex:circleindicator:1.2.2] C:\Users\peng\.android\build-cache\8450f09a861500b099a3910ffcbbe071edb7196a\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.ogaclejapan.smarttablayout:library:1.6.1] C:\Users\peng\.android\build-cache\28a9ddf0c8f1a8d54338e00e484638eb2ce294b3\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.ogaclejapan.smarttablayout:utils-v4:1.6.1] C:\Users\peng\.android\build-cache\d9a05fb55d2159bcb4da01067031954eafce6e4e\output\AndroidManifest.xml:8:5-10:41
+MERGED from [com.ogaclejapan.smarttablayout:utils-v13:1.6.1] C:\Users\peng\.android\build-cache\457bf0f3dd8bacc7147d4d6834f84e7be6edc25e\output\AndroidManifest.xml:8:5-10:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\peng\.android\build-cache\996f6581f0f120f1a9f64debc53b1df55fa2738e\output\AndroidManifest.xml:5:5-7:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.0] C:\Users\peng\.android\build-cache\8bda10f76dcbe33156320706f27c3e48150b2593\output\AndroidManifest.xml:5:5-7:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-armv5:0.8.0] C:\Users\peng\.android\build-cache\906de759d4de4a0a35b6af0e755842209cb640c2\output\AndroidManifest.xml:5:5-7:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-x86:0.8.0] C:\Users\peng\.android\build-cache\5578b0d07daed25a29a71962075c0d9827f730f1\output\AndroidManifest.xml:5:5-7:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-exo:0.8.0] C:\Users\peng\.android\build-cache\784d826bbe218a42e163109e80779d3d7578ca16\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.exoplayer:exoplayer:r1.5.11] C:\Users\peng\.android\build-cache\7a623877b6bd980e7f64771a5093f9339874af2e\output\AndroidManifest.xml:24:5-26:41
+MERGED from [tv.danmaku.ijk.media:ijkplayer-java:0.8.0] C:\Users\peng\.android\build-cache\22bd47a90f7d24030f31a95e5fd78391c8dc92cf\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.lqr.ninegridimageview:library:1.0.0] C:\Users\peng\.android\build-cache\40ed6143a27c5090ae59743d0738a3d71eba02a2\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\peng\.android\build-cache\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\peng\.android\build-cache\6b60dc327bbddf313f7ddb3145fb02de3cdbef69\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\peng\.android\build-cache\d5867bde12edb9295c53c27171c20fab5514b100\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\peng\.android\build-cache\ccf9959b4e2ccec246421cde4f3acf98bae5e7fc\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\peng\.android\build-cache\bbf0b859f409205bd762efb896ede0da65f2dc5e\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\peng\.android\build-cache\5581feb7cac7a12fdfef5142b5cbd1e2f318892a\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\peng\.android\build-cache\a444308a4967ac3ae0c4c49412e6f4aef8ed9f18\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\peng\.android\build-cache\577d85d07c9e3b7a1f5bb4c4450f174c7dc97016\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\peng\.android\build-cache\150bfda57db0f7a29043476ce1ac6be3de77833f\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\peng\.android\build-cache\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\output\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from F:\SVN\ZX\app\src\main\AndroidManifest.xml
+		INJECTED from F:\SVN\ZX\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\SVN\ZX\app\src\main\AndroidManifest.xml
+		INJECTED from F:\SVN\ZX\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\peng\.android\build-cache\784b5004836d897aa266ff98f7a56de5df654bd3\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\peng\.android\build-cache\21e9ea421e4e9f1aaa055134bb7a0096663342f7\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\peng\.android\build-cache\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\peng\.android\build-cache\6b60dc327bbddf313f7ddb3145fb02de3cdbef69\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\peng\.android\build-cache\d5867bde12edb9295c53c27171c20fab5514b100\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\peng\.android\build-cache\ccf9959b4e2ccec246421cde4f3acf98bae5e7fc\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\peng\.android\build-cache\bbf0b859f409205bd762efb896ede0da65f2dc5e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\peng\.android\build-cache\5581feb7cac7a12fdfef5142b5cbd1e2f318892a\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\peng\.android\build-cache\a444308a4967ac3ae0c4c49412e6f4aef8ed9f18\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\peng\.android\build-cache\577d85d07c9e3b7a1f5bb4c4450f174c7dc97016\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\peng\.android\build-cache\150bfda57db0f7a29043476ce1ac6be3de77833f\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\peng\.android\build-cache\784b5004836d897aa266ff98f7a56de5df654bd3\output\AndroidManifest.xml:24:9-31
+	android:name
+		ADDED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\peng\.android\build-cache\784b5004836d897aa266ff98f7a56de5df654bd3\output\AndroidManifest.xml:23:9-47

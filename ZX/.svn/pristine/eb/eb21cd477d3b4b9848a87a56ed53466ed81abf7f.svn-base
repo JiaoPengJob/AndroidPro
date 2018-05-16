@@ -1,0 +1,225 @@
+package com.tch.zx.activity.mine;
+
+import android.content.Intent;
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.activity.ChiefActivity;
+import com.tch.zx.activity.contacts.AddLableActivity;
+import com.tch.zx.activity.login_register.TradeActivity;
+import com.tch.zx.view.DynamicPhotoPopupWindow;
+import com.tch.zx.wheelview.model.AddressDtailsEntity;
+import com.tch.zx.wheelview.model.AddressModel;
+import com.tch.zx.wheelview.utils.JsonUtil;
+import com.tch.zx.wheelview.utils.Utils;
+import com.tch.zx.wheelview.view.ChooseAddressWheel;
+import com.tch.zx.wheelview.view.ChooseSexWheel;
+import com.tch.zx.wheelview.view.listener.OnAddressChangeListener;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeoutException;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 个人信息
+ */
+public class MineInfoActivity extends AppCompatActivity implements OnAddressChangeListener {
+
+    //标题内容
+    @BindView(R.id.tv_title_top_all)
+    TextView tv_title_top_all;
+    //显示dialog的父布局
+    @BindView(R.id.ll_parent_dynamic_mine_info)
+    LinearLayout ll_parent_dynamic_mine_info;
+    //显示地区信息文本框
+    @BindView(R.id.tv_address_mine_info)
+    TextView tv_address_mine_info;
+    //性别展示文本框
+    @BindView(R.id.tv_sex_mine_info)
+    TextView tv_sex_mine_info;
+
+    //设置popupwindow的布局参数
+    private WindowManager.LayoutParams params;
+    //跳转Intent
+    private Intent intent;
+    //展示地区轮滑效果
+    private ChooseAddressWheel chooseAddressWheel = null;
+    private ChooseSexWheel chooseSexWheel = null;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_mine_info);
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+        tv_title_top_all.setText("个人信息");
+        init();
+        initView();
+    }
+
+    /**
+     * 选取头像
+     */
+    @OnClick(R.id.rl_photo_image_mine)
+    public void selectPhotoMine() {
+        rewardInfo();
+    }
+
+    /**
+     * 修改名字
+     */
+    @OnClick(R.id.rl_name_mine_info)
+    public void updateName() {
+        intent = new Intent(this, AddLableActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 选择性别
+     */
+    @OnClick(R.id.rl_sex_mine_info)
+    public void editSex() {
+        Utils.hideKeyBoard(this);
+        chooseSexWheel.show(ll_parent_dynamic_mine_info);
+    }
+
+    /**
+     * 选择地区
+     */
+    @OnClick(R.id.rl_address_mine_info)
+    public void editAddress(View view) {
+        Utils.hideKeyBoard(this);
+        chooseAddressWheel.show(ll_parent_dynamic_mine_info);
+    }
+
+    /**
+     * 编辑简介
+     */
+    @OnClick(R.id.rl_introduction_editing)
+    public void introdutionEditing() {
+        intent = new Intent(this, IntroductionEditingActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 编辑公司
+     */
+    @OnClick(R.id.rl_edit_company)
+    public void editrlCompany() {
+        intent = new Intent(this, AddLableActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 编辑职位
+     */
+    @OnClick(R.id.rl_edit_office)
+    public void editOffice() {
+        intent = new Intent(this, AddLableActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 编辑行业
+     */
+    @OnClick(R.id.rl_edit_industry)
+    public void editIndustry() {
+        intent = new Intent(this, TradeActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 选择图片
+     */
+    private void rewardInfo() {
+        DynamicPhotoPopupWindow rewardPopupWindow = new DynamicPhotoPopupWindow(this);
+        //设置Popupwindow显示位置（从底部弹出）
+        rewardPopupWindow.showAtLocation(ll_parent_dynamic_mine_info, Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+        params = getWindow().getAttributes();
+        //当弹出Popupwindow时，背景变半透明
+        params.alpha = 0.7f;
+        getWindow().setAttributes(params);
+        //设置Popupwindow关闭监听，当Popupwindow关闭，背景恢复1f
+        rewardPopupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                params = getWindow().getAttributes();
+                params.alpha = 1f;
+                getWindow().setAttributes(params);
+            }
+        });
+    }
+
+    /**
+     * 展示性别选择
+     */
+    private void initView() {
+        List<String> list = new ArrayList<String>();
+        list.add("男");
+        list.add("女");
+        chooseSexWheel = new ChooseSexWheel(this);
+        chooseSexWheel.bindData(list);
+        chooseSexWheel.setOnAddressChangeListener(new OnAddressChangeListener() {
+            @Override
+            public void onAddressChange(String province, String city, String district) {
+                tv_sex_mine_info.setText(city);
+            }
+        });
+    }
+
+    /**
+     * 加载地区信息
+     */
+    private void init() {
+        initWheel();
+        initData();
+    }
+
+    private void initWheel() {
+        chooseAddressWheel = new ChooseAddressWheel(this);
+        chooseAddressWheel.setOnAddressChangeListener(this);
+    }
+
+    private void initData() {
+        String address = Utils.readAssert(this, "address.txt");
+        AddressModel model = JsonUtil.parseJson(address, AddressModel.class);
+        if (model != null) {
+            AddressDtailsEntity data = model.Result;
+            if (data == null) return;
+            tv_address_mine_info.setText(data.Province + " " + data.City + " " + data.Area);
+            if (data.ProvinceItems != null && data.ProvinceItems.Province != null) {
+                chooseAddressWheel.setProvince(data.ProvinceItems.Province);
+                chooseAddressWheel.defaultValue(data.Province, data.City, data.Area);
+            }
+        }
+    }
+
+    @Override
+    public void onAddressChange(String province, String city, String district) {
+        tv_address_mine_info.setText(province + " " + city + " " + district);
+    }
+}

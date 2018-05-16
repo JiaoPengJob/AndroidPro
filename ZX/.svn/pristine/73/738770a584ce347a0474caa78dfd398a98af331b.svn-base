@@ -1,0 +1,94 @@
+package com.tch.zx.activity.line.online;
+
+import android.os.Build;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+import com.ogaclejapan.smarttablayout.SmartTabLayout;
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
+import com.tch.zx.R;
+import com.tch.zx.fragment.line.OnLinePlayerItemMainFragment;
+import com.tch.zx.fragment.line.OnLinePlayerItemTalkFragment;
+import com.tch.zx.media.IjkVideoView;
+import com.tch.zx.media.MediaPlayerController;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+/**
+ * 直播/观看的页面
+ */
+public class OnLinePlayerItemMainActivity extends AppCompatActivity {
+
+    //整体选项卡布局
+    @BindView(R.id.stl_general)
+    SmartTabLayout stl_general;
+    //整体选项卡子布局ViewPager
+    @BindView(R.id.vp_general)
+    ViewPager vp_general;
+
+    //视频播放组件
+    @BindView(R.id.ijk_view_player)
+    IjkVideoView ijk_view_player;
+
+    @BindView(R.id.rl_player_play)
+    RelativeLayout rl_player_play;
+
+    @BindView(R.id.ll_activity_player_item_main)
+    LinearLayout ll_activity_player_item_main;
+
+    //播放地址
+    private String mediaPlayerUrl = "http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8";
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_on_line_player_item_main);
+        //集成使用Butterknife
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+        initPlayer();
+        setViewPagersData();
+    }
+
+    /**
+     * 加载视频播放器
+     */
+    private void initPlayer() {
+        //http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8
+        //http://baobab.wdjcdn.com/1456665467509qingshu.mp4
+        MediaPlayerController mediaPlayerController = new MediaPlayerController(OnLinePlayerItemMainActivity.this, 1,mediaPlayerUrl,rl_player_play,ll_activity_player_item_main);
+        mediaPlayerController.init();
+    }
+
+    /**
+     * 加载首页tabView信息
+     */
+    private void setViewPagersData() {
+        //向选项卡布局中添加子布局Fragment，
+        FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
+                getSupportFragmentManager(), FragmentPagerItems.with(this)
+                .add("课程", OnLinePlayerItemMainFragment.class)
+                .add("讨论", OnLinePlayerItemTalkFragment.class)
+                .create());
+        vp_general.setAdapter(adapter);
+        stl_general.setViewPager(vp_general);
+    }
+}

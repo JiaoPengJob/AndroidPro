@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tch.zx"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="25" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" />
+
+    <application
+        android:name="com.tch.zx.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="AhycVXOKq9BCxQTjGOoAU2NyjY7ztP7C" />
+
+        <activity android:name="com.tch.zx.activity.line.MainActivity" />
+        <activity android:name="com.tch.zx.activity.login_register.GuideActivity" />
+        <activity android:name="com.tch.zx.activity.login_register.RegisterActivity" />
+        <activity android:name="com.tch.zx.activity.login_register.RegisterSureActivity" />
+        <activity android:name="com.tch.zx.activity.login_register.WechatLoginActivity" />
+        <activity android:name="com.tch.zx.activity.login_register.PhoneLoginActivity" />
+        <activity android:name="com.tch.zx.activity.login_register.FindPasswordBackActivity" />
+        <activity android:name="com.tch.zx.activity.line.SearchMainActivity" />
+        <activity android:name="com.tch.zx.activity.line.PurchasedActivity" />
+        <activity android:name="com.tch.zx.activity.line.TopListActivity" />
+        <activity android:name="com.tch.zx.activity.login_register.TradeActivity" />
+        <activity android:name="com.tch.zx.activity.line.online.OnLinePlayerMainActivity" />
+        <activity android:name="com.tch.zx.activity.line.greatclass.GreatClassMainActivity" />
+        <activity
+            android:name="com.tch.zx.activity.line.online.OnLinePlayerItemMainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.tch.zx.activity.line.greatclass.GreatClassPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="com.tch.zx.activity.line.column.ColumnActivity" />
+        <activity android:name="com.tch.zx.activity.line.column.ColumnInfoActivity" />
+        <activity android:name="com.tch.zx.activity.line.column.FreeExperienceActivity" />
+        <activity android:name="com.tch.zx.activity.line.column.BuySubscriptionActivity" />
+        <activity android:name="com.tch.zx.activity.line.column.HasBuySubscriptionActivityActivity" />
+        <activity android:name="com.tch.zx.activity.line.unline.LineDownMainActivity" />
+        <activity android:name="com.tch.zx.activity.line.unline.LineDownInfoActivity" />
+        <activity android:name="com.tch.zx.activity.line.MapActivity" />
+        <activity android:name="com.tch.zx.activity.ChiefActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tch.zx.activity.message.TogetherChatActivity" />
+        <activity android:name="com.tch.zx.activity.message.AddFriendsActivity" />
+        <activity android:name="com.tch.zx.activity.message.FriendInfoActivity" />
+        <activity android:name="com.tch.zx.activity.message.GroupChatActivity" />
+        <activity android:name="com.tch.zx.activity.message.GroupInfoActivity" />
+    </application>
+
+</manifest>

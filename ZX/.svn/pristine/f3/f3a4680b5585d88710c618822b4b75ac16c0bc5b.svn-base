@@ -1,0 +1,78 @@
+package com.tch.zx.activity.line.online;
+
+import android.os.Build;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.ogaclejapan.smarttablayout.SmartTabLayout;
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
+import com.tch.zx.R;
+import com.tch.zx.fragment.line.HotOnlinePlayerRemdFragment;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 热门直播主页面
+ */
+public class OnLinePlayerMainActivity extends AppCompatActivity {
+
+    //tab标签栏
+    @BindView(R.id.stl_general)
+    SmartTabLayout stl_general;
+    //标签栏viewpager
+    @BindView(R.id.vp_general)
+    ViewPager vp_general;
+    //头标题返回
+    @BindView(R.id.ll_return_back_top_all)
+    LinearLayout ll_return_back_top_all;
+    //头标题info
+    @BindView(R.id.tv_title_top_all)
+    TextView tv_title_top_all;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_on_line_player_main);
+        //集成使用Butterknife
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+        tv_title_top_all.setText("热门直播");
+        setViewPagersData();
+    }
+
+    /**
+     * 加载tabView信息
+     */
+    private void setViewPagersData() {
+        //向选项卡布局中添加子布局Fragment，
+        FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
+                getSupportFragmentManager(), FragmentPagerItems.with(this)
+                .add("推荐", HotOnlinePlayerRemdFragment.class)
+                .create());
+        vp_general.setAdapter(adapter);
+        stl_general.setViewPager(vp_general);
+    }
+
+    @OnClick(R.id.ll_return_back_top_all)
+    public void returnBackOnClick() {
+        OnLinePlayerMainActivity.this.finish();
+    }
+
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical"
+    android:id="@+id/llMemberShipLevel"
+    tools:context="com.tch.kuwanx.ui.mine.MemberShipLevelActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlLevelTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#FFDA44">
+
+        <ImageButton
+            android:id="@+id/ibLevelBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@color/transparent"
+            android:scaleType="centerInside"
+            android:src="@mipmap/base_point" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="会员等级"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/ibLevelMenu"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/three_point" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewLevelBgmDark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:visibility="gone"></View>
+
+    </RelativeLayout>
+
+</LinearLayout>

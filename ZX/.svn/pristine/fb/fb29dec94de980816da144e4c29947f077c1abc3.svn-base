@@ -1,0 +1,171 @@
+package com.tch.zx.fragment.contacts;
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.activity.ChiefActivity;
+import com.tch.zx.activity.contacts.AddLableActivity;
+import com.tch.zx.adapter.contacts.IndustryAdapter;
+import com.tch.zx.util.HelperUtil;
+import com.tch.zx.view.FlowTagGroup;
+import com.tch.zx.view.RecyclerViewDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 人脉/合作/行业
+ */
+
+public class IndustryFragment extends Fragment {
+
+    //列表
+    @BindView(R.id.rvCooperationList)
+    RecyclerView rvCooperationList;
+    //默认布局内容
+    @BindView(R.id.info_default_industry)
+    RelativeLayout info_default_industry;
+    //发布的布局
+    @BindView(R.id.release_industry)
+    RelativeLayout release_industry;
+    //标签列表
+    @BindView(R.id.ftg_release_industry)
+    FlowTagGroup ftg_release_industry;
+    @BindView(R.id.ftg_release_give)
+    FlowTagGroup ftg_release_give;
+    @BindView(R.id.ftg_release_demand)
+    FlowTagGroup ftg_release_demand;
+
+    private View viewRoot;
+    //适配器
+    private IndustryAdapter industryAdapter;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //获取父布局View
+        viewRoot = inflater.inflate(R.layout.fragment_industry, container, false);
+        //初始化ButterKnife
+        ButterKnife.bind(this, viewRoot);
+        release_industry.setVisibility(View.GONE);
+        info_default_industry.setVisibility(View.VISIBLE);
+        ChiefActivity.fth_host.setVisibility(View.VISIBLE);
+        setRvData();
+
+        return viewRoot;
+    }
+
+    /**
+     * 加载数据
+     */
+    private void setRvData() {
+        List<String> list = new ArrayList<String>();
+        list.add("");
+        list.add("");
+        industryAdapter = new IndustryAdapter(getContext(), list);
+        rvCooperationList.setLayoutManager(new LinearLayoutManager(getContext()));
+        //设置分割线
+        rvCooperationList.addItemDecoration(new RecyclerViewDecoration(getContext(), "#EAEAEA", 10, false));
+        rvCooperationList.setAdapter(industryAdapter);
+    }
+
+    /**
+     * 发布点击事件
+     */
+    @OnClick(R.id.iv_release_industry)
+    public void releaseIndustryClick() {
+        ChiefActivity.fth_host.setVisibility(View.GONE);
+        info_default_industry.setVisibility(View.GONE);
+        release_industry.setVisibility(View.VISIBLE);
+        setGroupData(ftg_release_industry, true);
+        setGroupData(ftg_release_give, true);
+        setGroupData(ftg_release_demand, true);
+    }
+
+    /**
+     * 加载各组列表子项
+     *
+     * @param flowTagGroup
+     */
+    private void setGroupData(FlowTagGroup flowTagGroup, boolean isAddImg) {
+        for (int i = 0; i < 5; i++) {
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            lp.setMargins(0, 8, 0, 0);
+            TextView textView = new TextView(getContext());
+            textView.setLayoutParams(lp);
+            textView.setBackground(this.getResources().getDrawable(R.drawable.shape_corner_background_green_fifty));
+            textView.setPadding(10, 5, 10, 5);
+            textView.setTextColor(Color.parseColor("#FFFFFF"));
+            textView.setTextSize(12f);
+            textView.setText("测试" + i);
+
+            ImageView imageView = new ImageView(getContext());
+            imageView.setImageResource(R.mipmap.clear_textview);
+            RelativeLayout.LayoutParams rlp = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            rlp.setMargins((int) textView.getPaint().measureText(textView.getText().toString()) + 9, 0, 0, 0);
+            imageView.setLayoutParams(rlp);
+
+            final RelativeLayout relativeLayout = new RelativeLayout(getContext());
+            RelativeLayout.LayoutParams rlp1 = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 50);
+            rlp1.setMargins(3, 3, 3, 3);
+            relativeLayout.setLayoutParams(rlp1);
+            relativeLayout.addView(textView);
+            if (isAddImg) {
+                relativeLayout.addView(imageView);
+            }
+
+
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    relativeLayout.removeAllViews();
+                }
+            });
+
+            flowTagGroup.addView(relativeLayout);
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        release_industry.setVisibility(View.GONE);
+        info_default_industry.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        release_industry.setVisibility(View.GONE);
+        info_default_industry.setVisibility(View.VISIBLE);
+    }
+
+    /**
+     * 添加自定义标签监听事件
+     */
+    @OnClick({R.id.ll_add_demand, R.id.ll_add_give})
+    public void addLable() {
+        Intent intent = new Intent(getContext(), AddLableActivity.class);
+        startActivity(intent);
+    }
+}

@@ -1,0 +1,321 @@
+package com.tch.zx.activity.line.greatclass;
+
+import android.graphics.Color;
+import android.graphics.Rect;
+import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewTreeObserver;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.media.AudioMediaPlayerControler;
+import com.tch.zx.media.MediaPlayerController;
+import com.tch.zx.view.ObservableScrollView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 精品小课播放页面
+ */
+public class GreatClassPlayerActivity extends AppCompatActivity {
+
+    @BindView(R.id.rl_player_view)
+    RelativeLayout rl_player_view;
+    @BindView(R.id.rl_activity_player_class_main)
+    RelativeLayout rl_activity_player_class_main;
+    /*---------------------效果布局----------------------------------*/
+    //用来显示弹窗的父布局
+    @BindView(R.id.observableScrollView)
+    ObservableScrollView observableScrollView;
+    /*-------------------选择页面-------------------*/
+    //后退
+    @BindView(R.id.iv_choose_return_last)
+    ImageView iv_choose_return_last;
+    //选择布局
+    @BindView(R.id.rl_choose_audio_video_view)
+    RelativeLayout rl_choose_audio_video_view;
+    //音频模式
+    @BindView(R.id.ll_choose_audio_mode)
+    LinearLayout ll_choose_audio_mode;
+    //视频模式
+    @BindView(R.id.ll_choose_video_mode)
+    LinearLayout ll_choose_video_mode;
+    /*--------------音频播放页面---------------*/
+    //音频控制器展示布局
+    @BindView(R.id.ll_audio_player_play)
+    LinearLayout ll_audio_player_play;
+    //控制器
+    @BindView(R.id.ll_audio_player_controller)
+    LinearLayout ll_audio_player_controller;
+    //后退
+    @BindView(R.id.iv_return_audio_player)
+    ImageView iv_return_audio_player;
+    //展示大图
+    @BindView(R.id.iv_audio_photo_bgm)
+    ImageView iv_audio_photo_bgm;
+    //中部控制器,可滑动置顶
+    @BindView(R.id.ll_audio_controller_slide)
+    LinearLayout ll_audio_controller_slide;
+
+    /*------------------视频播放页面------------------------*/
+    //视频播放展示布局
+    @BindView(R.id.ll_video_player_play)
+    LinearLayout ll_video_player_play;
+    //视频的父布局
+    @BindView(R.id.rl_player_play)
+    RelativeLayout rl_player_play;
+
+    /*-----------------------所有信息展示-------------------------------*/
+    //信息展示的外部布局
+    @BindView(R.id.ll_class_info)
+    LinearLayout ll_class_info;
+    //课程
+    @BindView(R.id.ll_info_top_class)
+    LinearLayout ll_info_top_class;
+    @BindView(R.id.iv_info_class_choose)
+    ImageView iv_info_class_choose;
+    @BindView(R.id.tv_info_class_choose)
+    TextView tv_info_class_choose;
+    @BindView(R.id.view_info_bottom_class)
+    View view_info_bottom_class;
+    //选集
+    @BindView(R.id.ll_info_top_types)
+    LinearLayout ll_info_top_types;
+    @BindView(R.id.iv_info_types_choose)
+    ImageView iv_info_types_choose;
+    @BindView(R.id.tv_info_types_choose)
+    TextView tv_info_types_choose;
+    @BindView(R.id.view_info_bottom_types)
+    View view_info_bottom_types;
+    //讨论
+    @BindView(R.id.ll_info_top_talk)
+    LinearLayout ll_info_top_talk;
+    @BindView(R.id.iv_info_talk_choose)
+    ImageView iv_info_talk_choose;
+    @BindView(R.id.tv_info_talk_choose)
+    TextView tv_info_talk_choose;
+    @BindView(R.id.view_info_bottom_talk)
+    View view_info_bottom_talk;
+    //信息滑动布局
+    @BindView(R.id.sv_class_info)
+    ScrollView sv_class_info;
+    //课程信息所有布局
+    @BindView(R.id.ll_info_first)
+    LinearLayout ll_info_first;
+    //选集上面的布局
+    @BindView(R.id.ll_info_second)
+    LinearLayout ll_info_second;
+
+
+    /*--------------------变量设置----------------------------*/
+    //视频播放地址
+    private String mediaPlayerUrl = "http://115.28.95.41:8080/uploadfile/zhixian/201706/148c9668a5f54045853288a47e24917d.mp4";
+    //音频播放地址
+    private String audioPlayerUrl = "http://115.28.95.41:8080/uploadfile/zhixian/201706/8cca1bf717284bb899b5bba21fb8ad41.mp3 ";
+    //记录滑动坐标
+    private int oldY, newY;
+    //记录滑动的距离
+    private int distanceSlide = 0;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_great_class_player);
+        //集成使用Butterknife
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+
+
+        initViewAnim();
+
+    }
+
+    /*--------------视频播放----------------------*/
+
+    /**
+     * 加载视频播放器
+     */
+    private void initPlayer() {
+        //http://live.hkstv.hk.lxdns.com/live/hks/playlist.m3u8
+        //http://baobab.wdjcdn.com/1456665467509qingshu.mp4
+        MediaPlayerController mediaPlayerController = new MediaPlayerController(GreatClassPlayerActivity.this, 1, mediaPlayerUrl, rl_player_play, rl_activity_player_class_main);
+        mediaPlayerController.init();
+    }
+
+
+    /*------------------------------选择页面的点击事件--------------------------------------------*/
+
+    /**
+     * 选择/后退
+     */
+    @OnClick({R.id.iv_choose_return_last, R.id.iv_return_audio_player})
+    public void returnInChoose() {
+        GreatClassPlayerActivity.this.finish();
+    }
+
+    /**
+     * 选择/音频模式
+     */
+    @OnClick(R.id.ll_choose_audio_mode)
+    public void audioInChoose() {
+        ll_video_player_play.setVisibility(View.GONE);
+        rl_choose_audio_video_view.setVisibility(View.GONE);
+        ll_audio_player_play.setVisibility(View.VISIBLE);
+
+        AudioMediaPlayerControler audioMediaPlayerControler = new AudioMediaPlayerControler(GreatClassPlayerActivity.this, audioPlayerUrl, ll_audio_player_controller, rl_activity_player_class_main);
+        audioMediaPlayerControler.initAudioPlayer();
+    }
+
+    /**
+     * 选择/视频模式
+     */
+    @OnClick(R.id.ll_choose_video_mode)
+    public void videoInChoose() {
+        rl_choose_audio_video_view.setVisibility(View.GONE);
+        initPlayer();
+    }
+
+    /**
+     * 课程选择
+     */
+    @OnClick(R.id.ll_info_top_class)
+    public void classChoose() {
+        sv_class_info.post(new Runnable() {
+            @Override
+            public void run() {
+                Message messageClass = new Message();
+                messageClass.what = 30;
+                messageClass.obj = 0;
+                handler.sendMessage(messageClass);
+            }
+        });
+
+        iv_info_class_choose.setImageResource(R.mipmap.class_seleted);
+        tv_info_class_choose.setTextColor(Color.parseColor("#2EA168"));
+        view_info_bottom_class.setVisibility(View.VISIBLE);
+
+        iv_info_types_choose.setImageResource(R.mipmap.types_unseleted);
+        tv_info_types_choose.setTextColor(Color.parseColor("#666666"));
+        view_info_bottom_types.setVisibility(View.GONE);
+
+        iv_info_talk_choose.setImageResource(R.mipmap.talk_unseleted);
+        tv_info_talk_choose.setTextColor(Color.parseColor("#666666"));
+        view_info_bottom_talk.setVisibility(View.GONE);
+    }
+
+    /**
+     * 选集选择
+     */
+    @OnClick(R.id.ll_info_top_types)
+    public void typesChoose() {
+        sv_class_info.post(new Runnable() {
+            @Override
+            public void run() {
+                Message messageClass = new Message();
+                messageClass.what = 30;
+                messageClass.obj = ll_info_first.getMeasuredHeight();
+                handler.sendMessage(messageClass);
+            }
+        });
+
+        iv_info_class_choose.setImageResource(R.mipmap.class_unseleted);
+        tv_info_class_choose.setTextColor(Color.parseColor("#666666"));
+        view_info_bottom_class.setVisibility(View.GONE);
+
+        iv_info_types_choose.setImageResource(R.mipmap.types_seleted);
+        tv_info_types_choose.setTextColor(Color.parseColor("#2EA168"));
+        view_info_bottom_types.setVisibility(View.VISIBLE);
+
+        iv_info_talk_choose.setImageResource(R.mipmap.talk_unseleted);
+        tv_info_talk_choose.setTextColor(Color.parseColor("#666666"));
+        view_info_bottom_talk.setVisibility(View.GONE);
+    }
+
+    /**
+     * 评论选择
+     */
+    @OnClick(R.id.ll_info_top_talk)
+    public void talkChoose() {
+        observableScrollView.setEnabled(false);
+        sv_class_info.post(new Runnable() {
+            @Override
+            public void run() {
+                Message messageClass = new Message();
+                messageClass.what = 30;
+                messageClass.obj = ll_info_first.getMeasuredHeight() + ll_info_second.getMeasuredHeight();
+                handler.sendMessage(messageClass);
+            }
+        });
+
+        iv_info_class_choose.setImageResource(R.mipmap.class_unseleted);
+        tv_info_class_choose.setTextColor(Color.parseColor("#666666"));
+        view_info_bottom_class.setVisibility(View.GONE);
+
+        iv_info_types_choose.setImageResource(R.mipmap.types_unseleted);
+        tv_info_types_choose.setTextColor(Color.parseColor("#666666"));
+        view_info_bottom_types.setVisibility(View.GONE);
+
+        iv_info_talk_choose.setImageResource(R.mipmap.talk_seleted);
+        tv_info_talk_choose.setTextColor(Color.parseColor("#2EA168"));
+        view_info_bottom_talk.setVisibility(View.VISIBLE);
+    }
+
+    /*----------------展示效果----------------------------*/
+
+    /**
+     * 滑动动画效果
+     */
+    private void initViewAnim() {
+        observableScrollView.setOnScollChangedListener(new ObservableScrollView.OnScollChangedListener() {
+            @Override
+            public void onScrollChanged(ObservableScrollView scrollView, int x, int y, int oldx, int oldy) {
+                distanceSlide = y;
+                if (distanceSlide > oldy) {
+                    //向下滑动
+                } else {
+                    //向上滑动
+                }
+            }
+        });
+    }
+
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case 30:
+                    Log.d("TAG", "obj------" + msg.obj);
+                    sv_class_info.scrollTo(0, (int) msg.obj);
+                    break;
+                case 1:
+
+                    break;
+            }
+        }
+    };
+}

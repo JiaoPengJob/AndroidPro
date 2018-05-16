@@ -1,0 +1,18 @@
+package com.tch.zx.activity.login_register;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+import com.tch.zx.R;
+
+/**
+ * 微信登录页面
+ */
+public class WechatLoginActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_wechat_login);
+    }
+}

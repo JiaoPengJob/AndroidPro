@@ -1,0 +1,263 @@
+<resources>
+    <string name="app_name">游木蛙</string>
+
+    <string name="main_company_name">北京游木蛙信息科技有限公司</string>
+    <string name="guide_come_app">进入游木蛙</string>
+    <string name="user_type_employer">雇主</string>
+    <string name="user_type_worker">工人</string>
+    <string name="login_input_phone">请输入手机号</string>
+    <string name="login_input_pwd">请输入密码</string>
+    <string name="login_register">免费注册</string>
+    <string name="login_forget_pwd">忘记密码</string>
+    <string name="login_into">立即登录</string>
+    <string name="login_weixin">微信</string>
+    <string name="login_qq">QQ</string>
+    <string name="register_type">注册账号类型:</string>
+    <string name="register_input_code">请输入验证码</string>
+    <string name="get_verification_code">获取验证码</string>
+    <string name="check_pwd">再次确认密码</string>
+    <string name="register_into">立即注册</string>
+    <string name="terms_service_info">注册即代表同意游木蛙</string>
+    <string name="terms_service_bt">【服务条款】</string>
+
+    <string name="work_register_name">姓&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;名</string>
+    <string name="work_register_identity">身份信息</string>
+    <string name="work_register_sex">年&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;龄</string>
+    <string name="work_register_type">工&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;种</string>
+    <string name="work_register_years">工&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;龄</string>
+    <string name="work_register_area">施工区域</string>
+    <string name="work_hint_name">请输入您的姓名</string>
+    <string name="work_hint_identity">请输入您的身份证号</string>
+    <string name="work_hint_sex">请输入您的年龄</string>
+    <string name="work_hint_type">请选择您的工种</string>
+    <string name="work_hint_years">0</string>
+    <string name="work_hint_area">省份-城市-区县</string>
+    <string name="determine">确定</string>
+    <string name="cancel">取消</string>
+    <string name="worker_year">工龄</string>
+    <string name="worker_year_info">工龄：</string>
+    <string name="worker_type">工种：</string>
+    <string name="start_time">开始时间</string>
+    <string name="end_time">截止时间</string>
+    <string name="area_province">省份</string>
+    <string name="area_city">城市</string>
+    <string name="area_county">区县</string>
+    <string name="done">完成</string>
+    <string name="input_new_pwd">请输入新密码</string>
+    <string name="update_pwd">修改密码</string>
+    <string name="update_pwd_success">密码修改成功</string>
+    <string name="beijing">北京</string>
+    <string name="user_location">您的位置</string>
+    <string name="switch_city">切换城市</string>
+    <string name="search">搜索</string>
+    <string name="history_search">历史搜索</string>
+    <string name="orders_number">接单量：</string>
+    <string name="good_at_it">擅长方面：</string>
+    <string name="name">姓名</string>
+    <string name="introduction">简介</string>
+    <string name="evaluation">评价</string>
+    <string name="make_appointment">立即预约</string>
+    <string name="wechat">微信</string>
+    <string name="friends">朋友圈</string>
+    <string name="qq">QQ好友</string>
+    <string name="qzone">QQ空间</string>
+    <string name="sina">新浪微博</string>
+    <string name="worker_info_synopsis">信息简介</string>
+    <string name="idle">空闲</string>
+    <string name="work_local">施工区域：</string>
+    <string name="personal_good_at">个人擅长</string>
+    <string name="engineering_experience">工程经历</string>
+    <string name="immediately_recruitment">立即招用</string>
+    <string name="project_name">工程名称：</string>
+    <string name="project_time">工程时间：</string>
+    <string name="project_content">工程内容：</string>
+    <string name="time">时间</string>
+    <string name="label">标签</string>
+    <string name="content">内容</string>
+    <string name="title">标题</string>
+
+    <string name="place_order">下单</string>
+    <string name="recruitment_title">招工标题</string>
+    <string name="recruitment_title_input">请输入招工标题</string>
+    <string name="recruitment_type">招工类型</string>
+    <string name="point_work">点工</string>
+    <string name="contractor_work">包工</string>
+    <string name="day_wage">每日工资</string>
+    <string name="money_input">请输入金额</string>
+    <string name="home_fee">上门费</string>
+    <string name="yuan">元</string>
+    <string name="construction_area">施工地点</string>
+    <string name="area">地点</string>
+    <string name="construction_time">施工时间</string>
+    <string name="construction_description">施工描述</string>
+    <string name="construction_description_input">请输入施工描述</string>
+    <string name="contact_person">联系人</string>
+    <string name="contact_person_input">请输入联系人姓名</string>
+    <string name="contact_phone">联系电话</string>
+    <string name="contact_phone_input">请输入联系电话</string>
+    <string name="area_manager">地址管理</string>
+    <string name="area_default">[默认地址]</string>
+    <string name="save">保存</string>
+    <string name="area_add">地址添加</string>
+    <string name="details">详细信息</string>
+    <string name="details_hint">请输入详细信息</string>
+    <string name="type">类型</string>
+
+    <string name="submit_time">发布时间：</string>
+    <string name="need_worker_tye">需求工种：</string>
+    <string name="demand_item_area">施工地点：</string>
+    <string name="demand_item_description">施工描述：</string>
+    <string name="demand_send_order">发布需求</string>
+
+    <string name="order_info_icon">需求信息</string>
+    <string name="order_clear">取消订单</string>
+    <string name="order_title">招工标题：</string>
+    <string name="order_type">招工类型：</string>
+    <string name="order_day_wage">每日工资：</string>
+    <string name="order_home_fee">上&#160;&#160;门&#160;&#160;费：</string>
+    <string name="order_construction_time">施工时间：</string>
+    <string name="order_contact_person">联&#160;&#160;系&#160;&#160;人：</string>
+    <string name="order_contact_phone">联系电话：</string>
+    <string name="has_get_order">已抢单工人</string>
+
+    <string name="age_icon">年龄：</string>
+
+    <string name="refuse_recruitment">拒绝招用</string>
+    <string name="confirm_recruitment">确认招用</string>
+    <string name="wait_order">等待接单</string>
+    <string name="order_need_type">需求工种</string>
+
+    <string name="order_center">订单中心</string>
+    <string name="order_all">全部</string>
+    <string name="order_pending_payment">待付款</string>
+    <string name="order_processing">进行中</string>
+    <string name="order_confirmed">待确认</string>
+    <string name="order_evaluated">待评价</string>
+    <string name="order_number">订单号：</string>
+    <string name="order_types">订单类型：</string>
+    <string name="order_time">下单时间：</string>
+    <string name="order_total">订单金额：￥</string>
+    <string name="order_again">再次下单</string>
+    <string name="order_done">已完成</string>
+    <string name="order_deposit">(定金)</string>
+    <string name="order_info">订单信息</string>
+    <string name="order_number_info">订&#160;&#160;单&#160;&#160;号：</string>
+    <string name="order_accept_time">接单时间：</string>
+    <string name="order_done_time">完成时间：</string>
+    <string name="order_evaluated_info">评价信息</string>
+    <string name="order_service_evaluated">服务评价：</string>
+    <string name="order_protocol">订单协议</string>
+    <string name="xxx_protocol">《三方协议》</string>
+
+    <string name="mine_cutover_role">切换角色</string>
+    <string name="mine_data">个人资料</string>
+    <string name="mine_transaction_details">交易明细</string>
+    <string name="settings">设置</string>
+    <string name="mine_clear_cache">清除缓存</string>
+    <string name="mine_abort_login">退出登录</string>
+    <string name="mine_photo">头&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;像</string>
+    <string name="mine_name">姓&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;名</string>
+    <string name="mine_name_new">昵&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;称</string>
+    <string name="mine_sex">性&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;别</string>
+    <string name="mine_phone">手&#160;&#160;机&#160;&#160;号</string>
+    <string name="mine_setting_pwd">设置密码</string>
+
+    <string name="select_album">从相册选取</string>
+    <string name="shoot">拍摄</string>
+    <string name="near_week">近一周</string>
+    <string name="near_month">近一月</string>
+
+    <string name="settings_feedback">意见反馈</string>
+    <string name="settings_user_agreement">用户协议</string>
+    <string name="settings_about_us">关于我们</string>
+    <string name="settings_evaluation_us">评价我们</string>
+    <string name="settings_share">分&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;享</string>
+    <string name="input_your_feed">请输入您的意见~</string>
+    <string name="submit">提交</string>
+    <string name="to_pay">去支付</string>
+    <string name="need_to_pay">需支付：￥</string>
+    <string name="wechat_pay">微信支付</string>
+    <string name="ali_pay">支付宝支付</string>
+    <string name="recommend_wechat">推荐微信用户使用</string>
+    <string name="recommend_ali">推荐支付宝用户使用</string>
+    <string name="submit_and_pay">提交并支付</string>
+    <string name="input_your_cancel">请输入取消原因</string>
+    <string name="need_pay_home_fee">需支付上门费：</string>
+    <string name="pay_info">(该工资为工人师傅为您上门考察的费用)</string>
+    <string name="work_not_hard">施工不细心</string>
+    <string name="select_and_input">请选择以上/输入辞退原因</string>
+    <string name="service_evaluation">服务评价：</string>
+    <string name="input_evaluation_content">请输入评价内容</string>
+    <string name="pwd_setting">密码设置</string>
+    <string name="info_perfect">信息完善</string>
+    <string name="msg_clear_all">是否清空所有已读消息</string>
+    <string name="sex">性别</string>
+    <string name="refresh">刷新</string>
+    <string name="wait_evaluated">待估价</string>
+    <string name="wait_done">待完成</string>
+    <string name="refuse_order">拒单</string>
+    <string name="immediately_order">立即接单</string>
+    <string name="actual_wage">实际工作工资</string>
+    <string name="actual_wage_info">(该工资为您与雇主协商辞退后，雇主需支付给您的实际工作工资,请务必如实填写!)</string>
+    <string name="actual_work_time">实际工作时间</string>
+    <string name="work_day_wage">日工资</string>
+    <string name="wage_settlement_info">(该时间为您与雇主确认完工后，雇主认可的实际工作时间,请务必如实填写!)</string>
+
+    <string name="personal_income">个人收益</string>
+    <string name="income_info">(温馨提示：平台会为您代缴收益产生的相关费用)</string>
+    <string name="income_details">收益明细</string>
+    <string name="update_withdraw_pwd">修改提现密码</string>
+    <string name="bind_bank_card">绑定银行卡</string>
+    <string name="withdraw">提现</string>
+    <string name="not_setting_withdraw_pwd">尚未设置提现密码</string>
+    <string name="now_setting">立即设置</string>
+    <string name="withdraw_number">提现金额</string>
+    <string name="now_withdraw">立即提现</string>
+    <string name="withdraw_info">输入金额超过当前最高提现金额</string>
+    <string name="input_withdraw_pwd">请输入提现密码</string>
+    <string name="withdraw_success_info">平台已收到您的提现申请，审核通过后会立即为您进行打款。</string>
+
+    <string name="ccb">建设银行</string>
+    <string name="icbc">工商银行</string>
+    <string name="has_bind_card">已绑定银行卡</string>
+    <string name="ex_bind">换绑</string>
+    <string name="no_bind_bank_card">尚未绑定银行卡</string>
+    <string name="sel_bind_bank_area">请选择开户行</string>
+    <string name="input_true_num">请输入正确的银行卡号</string>
+    <string name="input_bank_phone">请输入在柜台预留的手机号</string>
+    <string name="go_to_bind">立即绑定</string>
+
+    <string name="ordered_worker">已下单工人</string>
+    <string name="reject_single_reason">拒单原因</string>
+    <string name="wallet">钱包</string>
+    <string name="work_area_setting">施工区域管理</string>
+    <string name="good_at_worker">请输入您所擅长的工作</string>
+    <string name="setting_done">设置完成</string>
+    <string name="worker_type_info">工种</string>
+    <string name="look_order">查看订单</string>
+
+    <string name="dismiss_sure">辞退确认</string>
+    <string name="sure_dismiss">确认辞退</string>
+    <string name="right_info">并停止施工吗?</string>
+    <string name="bottom_info">(辞退操作必须与师傅协商一致!)</string>
+
+    <string name="area_delete">[删除]</string>
+    <string name="area_delete_sure">确认删除此地址?</string>
+    <string name="now_send">立即发布</string>
+    <string name="all_city">全市</string>
+    <string name="has_order">已接单</string>
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="app_tip">提示</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+
+    <string-array name="custom_weekdays">
+        <item>周天</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </string-array>
+
+</resources>

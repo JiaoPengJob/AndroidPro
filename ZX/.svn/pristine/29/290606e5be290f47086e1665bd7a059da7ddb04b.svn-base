@@ -1,0 +1,75 @@
+package com.tch.zx.activity.line.column;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.Window;
+import com.tch.zx.R;
+import com.tch.zx.activity.BaseActivity;
+import com.tch.zx.activity.line.online.OnLinePlayerItemMainActivity;
+import com.tch.zx.adapter.line.FreeExperienceAdapter;
+import com.tch.zx.view.RecyclerViewDecoration;
+import java.util.ArrayList;
+import java.util.List;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 付款之后的专栏页面
+ */
+public class HasBuySubscriptionActivityActivity extends BaseActivity {
+    /**
+     * 数据列表
+     */
+    @BindView(R.id.rv_has_buy_columns)
+    RecyclerView rv_has_buy_columns;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_has_buy_subscription_activity);
+        //集成使用Butterknife
+        ButterKnife.bind(this);
+
+        setListData();
+    }
+
+    /**
+     * 加载列表数据
+     */
+    private void setListData() {
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 5; i++) {
+            list.add("");
+        }
+
+        FreeExperienceAdapter freeExperienceAdapter = new FreeExperienceAdapter(this, list);
+        rv_has_buy_columns.setLayoutManager(new LinearLayoutManager(this));
+        //设置分割线
+        rv_has_buy_columns.addItemDecoration(new RecyclerViewDecoration(this, "#EAEAEA", 10, false));
+        rv_has_buy_columns.setAdapter(freeExperienceAdapter);
+        freeExperienceAdapter.setOnItemClickListener(new FreeExperienceAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(HasBuySubscriptionActivityActivity.this, OnLinePlayerItemMainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    /**
+     * 返回
+     */
+    @OnClick(R.id.iv_return_column_info_has_buy)
+    public void returnBackHasBuy() {
+        this.finish();
+    }
+}

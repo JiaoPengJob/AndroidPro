@@ -1,0 +1,106 @@
+package com.tch.zx.activity.contacts;
+
+import android.graphics.Rect;
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.ViewTreeObserver;
+import android.view.Window;
+import android.view.WindowManager;
+
+import com.tch.zx.R;
+import com.tch.zx.adapter.RvHotOnlinePlayerAdapter;
+import com.tch.zx.adapter.contacts.CommentDynamicAdapter;
+import com.tch.zx.view.RecyclerViewDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+/**
+ * 动态评论页面
+ */
+public class CommentActivity extends AppCompatActivity {
+
+    //评论信息的列表
+    @BindView(R.id.rv_comment_dynamic_list)
+    RecyclerView rv_comment_dynamic_list;
+
+    //评论列表适配器
+    private CommentDynamicAdapter commentDynamicAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+//        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_comment);
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+        //设置输入框在输入法上面
+        View decorView = getWindow().getDecorView();
+        View contentView = findViewById(Window.ID_ANDROID_CONTENT);
+        decorView.getViewTreeObserver().addOnGlobalLayoutListener(getGlobalLayoutListener(decorView, contentView));
+
+        setRecyclerViewData();
+    }
+
+    /**
+     * 加载评论信息列表数据
+     */
+    private void setRecyclerViewData() {
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 10; i++) {
+            list.add("");
+        }
+
+        commentDynamicAdapter = new CommentDynamicAdapter(this, list);
+        rv_comment_dynamic_list.setLayoutManager(new LinearLayoutManager(this));
+        //设置分割线
+        rv_comment_dynamic_list.addItemDecoration(new RecyclerViewDecoration(this, "#949494", 1, true));
+        rv_comment_dynamic_list.setAdapter(commentDynamicAdapter);
+        rv_comment_dynamic_list.setFocusable(false);
+    }
+
+    /**
+     * 设置输入框在输入法上面
+     *
+     * @param decorView
+     * @param contentView
+     * @return
+     */
+    private ViewTreeObserver.OnGlobalLayoutListener getGlobalLayoutListener(final View decorView, final View contentView) {
+        return new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                Rect r = new Rect();
+                decorView.getWindowVisibleDisplayFrame(r);
+
+                int height = decorView.getContext().getResources().getDisplayMetrics().heightPixels;
+                int diff = height - r.bottom;
+
+                if (diff != 0) {
+                    if (contentView.getPaddingBottom() != diff) {
+                        contentView.setPadding(0, 0, 0, diff);
+                    }
+                } else {
+                    if (contentView.getPaddingBottom() != 0) {
+                        contentView.setPadding(0, 0, 0, 0);
+                    }
+                }
+            }
+        };
+    }
+}

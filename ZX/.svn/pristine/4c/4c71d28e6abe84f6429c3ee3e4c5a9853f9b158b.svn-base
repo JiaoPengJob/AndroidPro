@@ -1,0 +1,85 @@
+package com.tch.zx.activity.line.column;
+
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.adapter.line.ColumnAdapter;
+import com.tch.zx.view.RecyclerViewDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 专栏订阅列表页
+ */
+public class ColumnActivity extends AppCompatActivity {
+
+    //后退
+    @BindView(R.id.ll_return_back_top_all)
+    LinearLayout ll_return_back_top_all;
+    //标题
+    @BindView(R.id.tv_title_top_all)
+    TextView tv_title_top_all;
+    //列表
+    @BindView(R.id.rv_column_read)
+    RecyclerView rv_column_read;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_column);
+        //集成使用Butterknife
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+        tv_title_top_all.setText("专栏订阅");
+
+        initRv();
+    }
+
+    /**
+     * 加载列表信息
+     */
+    private void initRv() {
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 10; i++) {
+            list.add("000000000");
+        }
+
+        ColumnAdapter columnAdapter = new ColumnAdapter(this, list);
+        rv_column_read.setLayoutManager(new LinearLayoutManager(this));
+        //设置分割线
+        rv_column_read.addItemDecoration(new RecyclerViewDecoration(this, "#EAEAEA", 1, true));
+        rv_column_read.setAdapter(columnAdapter);
+        rv_column_read.setFocusable(false);
+    }
+
+    /**
+     * 后退点击监听事件
+     */
+    @OnClick(R.id.ll_return_back_top_all)
+    public void returnBack() {
+        ColumnActivity.this.finish();
+    }
+
+}

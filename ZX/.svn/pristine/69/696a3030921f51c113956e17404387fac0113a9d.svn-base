@@ -1,0 +1,107 @@
+package com.tch.zx.fragment;
+
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.ogaclejapan.smarttablayout.SmartTabLayout;
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
+import com.tch.zx.R;
+import com.tch.zx.activity.ChiefActivity;
+import com.tch.zx.activity.line.MainActivity;
+import com.tch.zx.activity.line.PurchasedActivity;
+import com.tch.zx.activity.line.SearchMainActivity;
+import com.tch.zx.activity.line.column.ColumnActivity;
+import com.tch.zx.activity.line.greatclass.GreatClassMainActivity;
+import com.tch.zx.activity.line.online.OnLinePlayerMainActivity;
+import com.tch.zx.activity.line.unline.LineDownMainActivity;
+import com.tch.zx.adapter.ColumnSubsciptionAdapter;
+import com.tch.zx.adapter.FineLittleClassAdapter;
+import com.tch.zx.adapter.RecommentTitleAdapter;
+import com.tch.zx.adapter.RvHotOnlinePlayerAdapter;
+import com.tch.zx.view.GoTopScrollView;
+import com.tch.zx.view.RecyclerViewDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import me.relex.circleindicator.CircleIndicator;
+
+/**
+ * 主页推荐的展示页面
+ */
+
+public class ChiefFragment extends Fragment {
+
+    //Fragment父布局
+    private View viewRoot;
+
+    //整体选项卡布局
+    @BindView(R.id.stl_recomment_main)
+    SmartTabLayout stl_recomment_main;
+    //整体选项卡子布局ViewPager
+    @BindView(R.id.vp_recomment_main)
+    ViewPager vp_recomment_main;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //获取父布局View
+        viewRoot = inflater.inflate(R.layout.fragment_chief, container, false);
+        //初始化ButterKnife
+        ButterKnife.bind(this, viewRoot);
+
+        setViewPagersData();
+
+        return viewRoot;
+    }
+
+    /**
+     * 加载首页tabView信息
+     */
+    private void setViewPagersData() {
+        //向选项卡布局中添加子布局Fragment，
+        FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
+                getChildFragmentManager(), FragmentPagerItems.with(getContext())
+                .add("推荐", RecommendFragment.class)
+                .add("互联网", IntentnetFragment.class)
+                .create());
+        vp_recomment_main.setAdapter(adapter);
+        stl_recomment_main.setViewPager(vp_recomment_main);
+    }
+
+    /**
+     * 搜索按钮点击事件
+     */
+    @OnClick(R.id.ib_search_main)
+    public void searchMainOnClick() {
+        Intent intent = new Intent(getContext(), SearchMainActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 已购点击事件
+     */
+    @OnClick(R.id.tv_has_buy)
+    public void hasBuyOnClick() {
+        Intent intent = new Intent(getContext(), PurchasedActivity.class);
+        startActivity(intent);
+    }
+
+}

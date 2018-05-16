@@ -1,0 +1,122 @@
+package com.tch.zx.activity.mine;
+
+import android.content.Intent;
+import android.support.v4.view.ViewPager;
+import android.os.Bundle;
+import android.view.Window;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.activity.BaseActivity;
+import com.tch.zx.adapter.RecommentTitleAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import me.relex.circleindicator.CircleIndicator;
+
+/**
+ * 我的/公司信息
+ */
+public class CompanyInfoMainActivity extends BaseActivity {
+    /**
+     * 公司简介信息内容
+     */
+    @BindView(R.id.tv_company_info_content)
+    TextView tv_company_info_content;
+    /**
+     * 查看所有的按钮布局
+     */
+    @BindView(R.id.ll_company_info_look_all)
+    LinearLayout ll_company_info_look_all;
+    /**
+     * 查看全部内容的图标
+     */
+    @BindView(R.id.iv_company_info_look_all)
+    ImageView iv_company_info_look_all;
+    /**
+     * 图片滑动展示器
+     */
+    @BindView(R.id.indicator_company_info_main)
+    CircleIndicator indicator_company_info_main;
+    /**
+     * 展示子页
+     */
+    @BindView(R.id.viewpager_company_info_main)
+    ViewPager viewpager_company_info_main;
+
+    /**
+     * 判断是否展示了全部内容
+     */
+    private boolean isAll = false;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_company_info_main);
+        ButterKnife.bind(this);
+
+        initView();
+
+        setCircleIndicator();
+    }
+
+    /**
+     * 初始化布局
+     */
+    private void initView() {
+
+    }
+
+    /**
+     * 展示所有公司简介信息
+     */
+    @OnClick(R.id.ll_company_info_look_all)
+    public void showAllContent() {
+        String context = tv_company_info_content.getText().toString();
+        int length = context.length();
+        int i = length * 16 / 350;
+        if (isAll) {
+            tv_company_info_content.setLines(3);
+            iv_company_info_look_all.setImageResource(R.mipmap.select_all);
+            isAll = false;
+        } else {
+            tv_company_info_content.setLines(i);
+            iv_company_info_look_all.setImageResource(R.mipmap.top_point_content);
+            isAll = true;
+        }
+    }
+
+    /**
+     * 加载主页推荐tabView栏图片
+     */
+    private void setCircleIndicator() {
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 10; i++) {
+            list.add("https://i.imgur.com/vnwRc8V.gif");
+        }
+        RecommentTitleAdapter recommentTitleAdapter = new RecommentTitleAdapter(this,list);
+        viewpager_company_info_main.setAdapter(recommentTitleAdapter);
+        indicator_company_info_main.setFocusable(false);
+        indicator_company_info_main.setViewPager(viewpager_company_info_main);
+    }
+
+    /**
+     * 编辑
+     */
+    @OnClick(R.id.tv_edit_company_info)
+    public void editInfo() {
+        Intent intent = new Intent(this, CompanyDetailsActivity.class);
+        startActivity(intent);
+    }
+}

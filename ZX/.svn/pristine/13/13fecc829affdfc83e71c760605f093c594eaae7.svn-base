@@ -1,0 +1,538 @@
+[
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_recommend.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\fragment_recommend.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_chief.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\fragment_chief.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_group_user_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_group_user_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fine_little_class.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\fine_little_class.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_media_share.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\popup_media_share.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_phone_login.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_phone_login.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\audio_controller.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\audio_controller.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_line_down_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_line_down_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sub_module_player_teacher_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\sub_module_player_teacher_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_online_player_main.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_online_player_main.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_guide.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_guide.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_togeter_msg.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_togeter_msg.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_ex_first.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_ex_first.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sub_module_player_user_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\sub_module_player_user_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_trade_left.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_trade_left.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_free_experience.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_free_experience.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_talk_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_talk_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_fine_little_class.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_fine_little_class.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_chief.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_chief.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_wechat_login.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_wechat_login.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\audio_player_top.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\audio_player_top.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_line_down_main.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_line_down_main.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\hot_list_top.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\hot_list_top.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sub_module_player_talk_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\sub_module_player_talk_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\bottom_menu.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\bottom_menu.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_navigation_item.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_search_main.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_search_main.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_on_line_player_item_main.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_on_line_player_item_main.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_purchased.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\fragment_purchased.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_line_down_main.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_line_down_main.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\hot_online_player_recomment.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\hot_online_player_recomment.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menu_message_main.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\menu_message_main.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_unline_purchased.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_unline_purchased.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_column.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_column.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\table_media_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\table_media_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_pay_column.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\dialog_pay_column.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_class_purchased.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_class_purchased.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_reward.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\popup_reward.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_top_list.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_top_list.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_class_all.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_class_all.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_message_remind_delete.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_message_remind_delete.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_column_subsciption.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_column_subsciption.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sub_module_player_types_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\sub_module_player_types_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_online_player_talk.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\fragment_online_player_talk.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\class_great_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\class_great_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_class_for_player.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\fragment_class_for_player.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_on_line_player_main.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_on_line_player_main.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\bottom_pay_type.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\bottom_pay_type.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_layout_tab_text.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_hot_online_player_remd.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_hot_online_player_remd.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_online_player_class_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\fragment_online_player_class_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\column_subscription.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\column_subscription.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_free_experience.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_free_experience.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_intentnet.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\fragment_intentnet.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_trade.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_trade.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_search_history.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_search_history.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_navigation_item.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_bottom_navigation_item.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_purchased.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_purchased.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_column_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_column_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\search_history_list.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\search_history_list.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_friend_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_friend_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_map.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_map.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\table_media_info_section.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\table_media_info_section.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\table_media_info_row2.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\table_media_info_row2.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_buy_subscription.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_buy_subscription.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\title_white.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\title_white.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_message_main.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\fragment_message_main.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_group_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_group_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_column.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_column.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_trade_right.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_trade_right.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_tab_bottom.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\layout_tab_bottom.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_great_class_player.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_great_class_player.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register_sure.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_register_sure.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_add_friends.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_add_friends.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\table_media_info_row1.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\table_media_info_row1.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_ex_second.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\item_ex_second.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\choose_project_recomment.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\choose_project_recomment.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_together_chat.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_together_chat.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\notification_action.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\sub_module_player_class_info.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\sub_module_player_class_info.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\player_play.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\player_play.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_group_chat.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_group_chat.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_has_buy_subscription_activity.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\layout\\activity_has_buy_subscription_activity.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\641da8414398539922226d2132efd4b7694f54fd\\output\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\d1c51b70f2e5ab84d768ea04cc98eafeb6b72152\\output\\res\\layout\\abc_screen_content_include.xml"
+    }
+]

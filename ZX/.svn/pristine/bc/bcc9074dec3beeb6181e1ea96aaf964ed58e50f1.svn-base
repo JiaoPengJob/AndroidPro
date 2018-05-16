@@ -1,0 +1,53 @@
+package com.tch.zx.activity.line;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.widget.BaseAdapter;
+
+import com.tch.zx.R;
+import com.tch.zx.activity.BaseActivity;
+import com.tch.zx.adapter.FineLittleClassAdapter;
+import com.tch.zx.view.RecyclerViewDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+/**
+ * 热门榜单
+ */
+public class TopListActivity extends BaseActivity {
+
+    @BindView(R.id.rl_top_list)
+    RecyclerView rl_top_list;
+
+    private FineLittleClassAdapter fineLittleClassAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_top_list);
+        ButterKnife.bind(this);
+        setRlData();
+    }
+
+    /**
+     * 加载列表数据
+     */
+    private void setRlData() {
+        List<String> list = new ArrayList<String>();
+        list.add("123");
+        list.add("123");
+
+        fineLittleClassAdapter = new FineLittleClassAdapter(this, list);
+        rl_top_list.setLayoutManager(new LinearLayoutManager(this));
+        //设置分割线
+        rl_top_list.addItemDecoration(new RecyclerViewDecoration(this, "#EAEAEA", 30, false));
+        rl_top_list.setAdapter(fineLittleClassAdapter);
+        rl_top_list.setFocusable(false);
+    }
+}

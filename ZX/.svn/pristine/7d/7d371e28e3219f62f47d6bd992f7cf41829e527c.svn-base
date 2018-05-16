@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_search_history_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_text_search_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="搜索历史记录"
+        android:textColor="@color/text_three"
+        android:textSize="20sp" />
+
+    <com.tch.zx.view.FlowTagGroup
+        android:id="@+id/ftg_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_text_search_record"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"></com.tch.zx.view.FlowTagGroup>
+
+    <TextView
+        android:id="@+id/tv_clear_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ftg_history"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_clear_data"
+        android:padding="10dp"
+        android:text="清空搜索历史"
+        android:textColor="@color/single_green"
+        android:textSize="16sp"
+        android:visibility="gone" />
+</RelativeLayout>

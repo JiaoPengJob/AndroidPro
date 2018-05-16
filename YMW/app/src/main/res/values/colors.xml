@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_transparent_fifty">#80FFFFFF</color>
+    <color name="white_transparent_ten">#E6FFFFFF</color>
+    <color name="font_four">#444444</color>
+    <color name="font_seven">#777777</color>
+    <color name="font_seven_transparent_seventy">#4D777777</color>
+    <color name="green_31d09a">#31D09A</color>
+    <color name="white_e">#EEEEEE</color>
+    <color name="font_yellow">#FBC83F</color>
+    <color name="yellow_f6">#FF6600</color>
+    <color name="white_f0">#F0F0F0</color>
+    <color name="white_e5">#E5E5E5</color>
+    <color name="white_88">#888888</color>
+    <color name="font_64">#646464</color>
+    <color name="red_msg">#FF3030</color>
+    <color name="white_f3">#F3F3F3</color>
+    <color name="white_c6">#C6C6C6</color>
+    <color name="search_hint">#999999</color>
+    <color name="projection">#4C7876</color>
+    <color name="white_66">#666666</color>
+    <color name="shadow">#334C7876</color>
+    <color name="white_bf">#BFBFBF</color>
+    <color name="black_00">#1A000000</color>
+    <color name="white_d0">#D0D0D0</color>
+    <color name="white_dc">#DCDCDC</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="black">#000000</color>
+
+</resources>

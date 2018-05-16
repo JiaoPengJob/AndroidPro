@@ -1,0 +1,90 @@
+package com.tch.zx.activity.message;
+
+import android.os.Build;
+import android.support.annotation.StringDef;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.GridView;
+
+import com.tch.zx.R;
+import com.tch.zx.adapter.message.GroupUserInfoAdapter;
+import com.tch.zx.view.SwitchView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+/**
+ * 群组信息页
+ */
+public class GroupInfoActivity extends AppCompatActivity {
+
+    /**
+     * 群成员列表
+     */
+    @BindView(R.id.gv_group_user_number)
+    GridView gv_group_user_number;
+    //消息免打扰
+    @BindView(R.id.sv_no_disturb)
+    SwitchView sv_no_disturb;
+
+    //群成员适配器
+    private GroupUserInfoAdapter groupUserInfoAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_group_info);
+        //集成使用Butterknife
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+
+        setGroupPeople();
+        setSwitchButton();
+    }
+
+    /**
+     * 加载群成员列表
+     */
+    private void setGroupPeople() {
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 6; i++) {
+            list.add("000");
+        }
+        groupUserInfoAdapter = new GroupUserInfoAdapter(this, list);
+        gv_group_user_number.setAdapter(groupUserInfoAdapter);
+    }
+
+    /**
+     * 设置免打扰选择
+     */
+    private void setSwitchButton() {
+        sv_no_disturb.setState(false);
+
+        sv_no_disturb.setOnStateChangedListener(new SwitchView.OnStateChangedListener() {
+            @Override
+            public void toggleToOn() {
+                sv_no_disturb.toggleSwitch(true);
+            }
+
+            @Override
+            public void toggleToOff() {
+                sv_no_disturb.toggleSwitch(false);
+            }
+        });
+    }
+
+}

@@ -1,0 +1,77 @@
+package com.tch.zx.activity.contacts;
+
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.view.Window;
+import android.view.WindowManager;
+
+import com.tch.zx.R;
+import com.tch.zx.activity.BaseActivity;
+import com.tch.zx.adapter.message.GroupChatAdapter;
+import com.tch.zx.view.RecyclerViewDecoration;
+import com.tubb.smrv.SwipeMenuRecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+import static com.baidu.mapapi.BMapManager.getContext;
+
+/**
+ * 加入的所有群组
+ */
+public class GroupChatAllActivity extends BaseActivity {
+    /**
+     * 列表
+     */
+    @BindView(R.id.smrv_together_msggroup_chat_receive)
+    SwipeMenuRecyclerView smrv_together_msggroup_chat_receive;
+
+    /**
+     * 适配器
+     */
+    private GroupChatAdapter groupChatAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_group_chat_all);
+        ButterKnife.bind(this);
+
+        setData();
+    }
+
+    /**
+     * 加载列表数据
+     */
+    private void setData() {
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 10; i++) {
+            list.add("第" + i + "项");
+        }
+
+        groupChatAdapter = new GroupChatAdapter(this, list);
+        smrv_together_msggroup_chat_receive.setLayoutManager(new LinearLayoutManager(this));
+        //设置分割线
+        smrv_together_msggroup_chat_receive.addItemDecoration(new RecyclerViewDecoration(getContext(), "#EAEAEA", 1, false));
+        smrv_together_msggroup_chat_receive.setAdapter(groupChatAdapter);
+    }
+
+    /**
+     * 后退
+     */
+    @OnClick(R.id.ll_group_chat_title_return)
+    public void returnBack() {
+        this.finish();
+    }
+}

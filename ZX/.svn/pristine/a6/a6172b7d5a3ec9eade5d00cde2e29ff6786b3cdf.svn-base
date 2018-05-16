@@ -1,0 +1,74 @@
+package com.tch.zx.activity.mine;
+
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.adapter.mine.CollectionAllAdapter;
+import com.tch.zx.bean.TestBean;
+import com.tch.zx.view.RecyclerViewDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+/**
+ * 我的收藏
+ */
+public class CollectionMineActivity extends AppCompatActivity {
+
+    //标题内容
+    @BindView(R.id.tv_title_top_all)
+    TextView tv_title_top_all;
+    //我的收藏的数据列表
+    @BindView(R.id.rv_collection_mine_main)
+    RecyclerView rv_collection_mine_main;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_collection_mine);
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+        tv_title_top_all.setText("我的收藏");
+        setRecyclerViewData();
+    }
+
+    /**
+     * 加载所有收藏列表数据
+     */
+    private void setRecyclerViewData() {
+
+        List<TestBean> list = new ArrayList<TestBean>();
+        list.add(new TestBean("", 0));
+        list.add(new TestBean("", 1));
+        list.add(new TestBean("", 2));
+        list.add(new TestBean("", 3));
+        list.add(new TestBean("", 2));
+        list.add(new TestBean("", 1));
+        list.add(new TestBean("", 0));
+
+        CollectionAllAdapter collectionAllAdapter = new CollectionAllAdapter(this, list);
+        rv_collection_mine_main.setLayoutManager(new LinearLayoutManager(this));
+        //设置分割线
+        rv_collection_mine_main.addItemDecoration(new RecyclerViewDecoration(this, "#EAEAEA", 1, true));
+        rv_collection_mine_main.setAdapter(collectionAllAdapter);
+    }
+}

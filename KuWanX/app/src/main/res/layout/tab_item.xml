@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="70dp"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/llTabItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivTabItemPhoto"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/home_home_sel" />
+
+        <TextView
+            android:id="@+id/tvTabItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/selector_home_text"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTabItemMsg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="-8dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/llTabItem"
+        android:background="@drawable/shape_no_reading"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,125 @@
+package com.tch.zx.activity.contacts;
+
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.view.DynamicPhotoPopupWindow;
+import com.tch.zx.view.FlowTagGroup;
+import com.tch.zx.view.RewardPopupWindow;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+/**
+ * 发表朋友圈状态
+ */
+public class SendDynamicActivity extends AppCompatActivity {
+    //流式图片展示
+    @BindView(R.id.ftg_item_send_dynamic_img)
+    FlowTagGroup ftg_item_send_dynamic_img;
+    //展示popup父布局
+    @BindView(R.id.ll_dynamic_parent_main)
+    LinearLayout ll_dynamic_parent_main;
+
+    //添加图片的按钮
+    private ImageView addPhotoButton;
+
+    //需要发送的图片集合
+    private List<Bitmap> photos;
+
+    //设置popupwindow的布局参数
+    private WindowManager.LayoutParams params;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_send_dynamic);
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+
+        //加载图片数据
+        photos = new ArrayList<Bitmap>();
+        photos.add(BitmapFactory.decodeResource(getResources(), R.mipmap.add_image_icon));
+        setFTGImgData(photos);
+
+    }
+
+    /**
+     * 加载图片
+     */
+    private void setFTGImgData(List<Bitmap> list) {
+        ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(120, 120);
+        ViewGroup.MarginLayoutParams mlp = new ViewGroup.MarginLayoutParams(lp);
+        mlp.setMargins(10, 10, 10, 10);
+
+        for (int i = 0; i < photos.size(); i++) {
+            //默认存在添加图片的按钮
+            ImageView imageView = new ImageView(this);
+            imageView.setLayoutParams(mlp);
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setImageBitmap(photos.get(i));
+
+            //添加图片的点击事件监听
+            if (i == photos.size() - 1) {
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        rewardInfo();
+                    }
+                });
+            }
+
+            ftg_item_send_dynamic_img.addView(imageView);
+        }
+    }
+
+    /**
+     * 选择图片
+     */
+    private void rewardInfo() {
+        DynamicPhotoPopupWindow rewardPopupWindow = new DynamicPhotoPopupWindow(this);
+        //设置Popupwindow显示位置（从底部弹出）
+        rewardPopupWindow.showAtLocation(ll_dynamic_parent_main, Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
+        params = getWindow().getAttributes();
+        //当弹出Popupwindow时，背景变半透明
+        params.alpha = 0.7f;
+        getWindow().setAttributes(params);
+        //设置Popupwindow关闭监听，当Popupwindow关闭，背景恢复1f
+        rewardPopupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                params = getWindow().getAttributes();
+                params.alpha = 1f;
+                getWindow().setAttributes(params);
+            }
+        });
+    }
+
+}

@@ -1,0 +1,120 @@
+package com.tch.zx.activity.login_register;
+
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.adapter.login_register.ItemLeftTradeAdapter;
+import com.tch.zx.adapter.login_register.ItemRightTradeAdapter;
+import com.tch.zx.view.RecyclerViewDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class TradeActivity extends AppCompatActivity {
+
+    //头标题返回
+    @BindView(R.id.ll_return_back_top_trade)
+    LinearLayout ll_return_back_top_trade;
+
+    //头标题完成
+    @BindView(R.id.tv_done_trade)
+    TextView tv_done_trade;
+
+    //左侧列表
+    @BindView(R.id.rv_trade_left)
+    RecyclerView rv_trade_left;
+
+    //右侧列表
+    @BindView(R.id.rv_trade_right)
+    RecyclerView rv_trade_right;
+
+    //左侧列表适配器
+    private ItemLeftTradeAdapter itemLeftTradeAdapter;
+
+    //右侧列表适配器
+    private ItemRightTradeAdapter itemRightTradeAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_trade);
+        //集成使用Butterknife
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+        initData();
+    }
+
+    /**
+     * 加载数据
+     */
+    private void initData() {
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 100; i++) {
+            list.add("0");
+        }
+        itemLeftTradeAdapter = new ItemLeftTradeAdapter(this, list);
+        rv_trade_left.setLayoutManager(new LinearLayoutManager(this));
+        //设置分割线
+        rv_trade_left.addItemDecoration(new RecyclerViewDecoration(this, "#949494", 1, false));
+        itemLeftTradeAdapter.setOnItemClickListener(new ItemLeftTradeAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                itemLeftTradeAdapter.setSelectedPosition(position);
+                itemLeftTradeAdapter.notifyDataSetChanged();
+            }
+        });
+        rv_trade_left.setAdapter(itemLeftTradeAdapter);
+
+
+        itemRightTradeAdapter = new ItemRightTradeAdapter(this, list);
+        rv_trade_right.setLayoutManager(new LinearLayoutManager(this));
+        //设置分割线
+        rv_trade_right.addItemDecoration(new RecyclerViewDecoration(this, "#949494", 1, false));
+        itemRightTradeAdapter.setOnItemClickListener(new ItemRightTradeAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                itemRightTradeAdapter.setSelectedPosition(position);
+                itemRightTradeAdapter.notifyDataSetChanged();
+            }
+        });
+        rv_trade_right.setAdapter(itemRightTradeAdapter);
+    }
+
+    /**
+     * 头标题返回点击事件
+     */
+    @OnClick(R.id.ll_return_back_top_trade)
+    public void backOnClick() {
+        this.finish();
+    }
+
+    /**
+     * 头标题完成点击事件
+     */
+    @OnClick(R.id.tv_done_trade)
+    public void doneTradeOnClick() {
+
+    }
+}

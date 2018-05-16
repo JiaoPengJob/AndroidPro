@@ -1,0 +1,46 @@
+package com.tch.zx.fragment;
+
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import com.tch.zx.R;
+import com.tch.zx.view.GoTopScrollView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+/**
+ * 互联网
+ */
+
+public class IntentnetFragment extends Fragment {
+
+    //可置顶的滑动布局
+    @BindView(R.id.goto_top_view)
+    GoTopScrollView goto_top_view;
+    //置顶图片
+    @BindView(R.id.iv_return_top)
+    ImageView iv_return_top;
+
+    //Fragment父布局
+    private View viewRoot;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        //获取父布局View
+        viewRoot = inflater.inflate(R.layout.fragment_intentnet, container, false);
+        //初始化ButterKnife
+        ButterKnife.bind(this, viewRoot);
+        //设置置顶图片
+        goto_top_view.setImgeViewOnClickGoToFirst(iv_return_top);
+        //设置高度
+        goto_top_view.setScreenHeight(10);
+        return viewRoot;
+    }
+}

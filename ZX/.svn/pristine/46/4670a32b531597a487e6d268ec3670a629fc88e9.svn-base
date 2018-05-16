@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\animator\\indicator_animator.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\animator\\indicator_animator.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\animator\\indicator_no_animator.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\animator\\indicator_no_animator.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\animator\\scale_with_alpha.xml",
+        "source": "C:\\Users\\peng\\.android\\build-cache\\8450f09a861500b099a3910ffcbbe071edb7196a\\output\\res\\animator\\scale_with_alpha.xml"
+    },
+    {
+        "merged": "F:\\SVN\\ZX\\app\\build\\intermediates\\res\\merged\\debug\\animator\\indicator_animator_reverse.xml",
+        "source": "F:\\SVN\\ZX\\app\\src\\main\\res\\animator\\indicator_animator_reverse.xml"
+    }
+]

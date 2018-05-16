@@ -1,0 +1,197 @@
+package com.tch.zx.adapter;
+
+import android.content.Context;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseExpandableListAdapter;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+/**
+ * Created by JoePeng on 2017/6/8.
+ */
+
+public class SearchedEXAdapter extends BaseExpandableListAdapter {
+
+    private Context context;
+    private List<String> groupList;
+    private List<List<String>> itemList;
+
+    /**
+     * 构造函数
+     *
+     * @param context
+     * @param groupList
+     * @param itemList
+     */
+    public SearchedEXAdapter(Context context, List<String> groupList, List<List<String>> itemList) {
+        this.context = context;
+        this.groupList = groupList;
+        this.itemList = itemList;
+        Log.d("size",""+groupList.get(2)+"---"+itemList.get(1));
+    }
+
+    /**
+     * 获取组的个数
+     *
+     * @return
+     */
+    @Override
+    public int getGroupCount() {
+        return groupList.size();
+    }
+
+    /**
+     * 获取指定组中的子元素个数
+     *
+     * @param groupPosition
+     * @return
+     */
+    @Override
+    public int getChildrenCount(int groupPosition) {
+        return itemList.get(groupPosition).size();
+    }
+
+    /**
+     * 获取指定组中的数据
+     *
+     * @param groupPosition
+     * @return
+     */
+    @Override
+    public String getGroup(int groupPosition) {
+        return groupList.get(groupPosition);
+    }
+
+    /**
+     * 获取指定组中的指定子元素数据
+     *
+     * @param groupPosition
+     * @param childPosition
+     * @return
+     */
+    @Override
+    public String getChild(int groupPosition, int childPosition) {
+        return itemList.get(groupPosition).get(childPosition);
+    }
+
+    /**
+     * 获取指定组的ID，这个组ID必须是唯一的
+     *
+     * @param groupPosition
+     * @return
+     */
+    @Override
+    public long getGroupId(int groupPosition) {
+        return groupPosition;
+    }
+
+    /**
+     * 获取指定组中的指定子元素ID
+     *
+     * @param groupPosition
+     * @param childPosition
+     * @return
+     */
+    @Override
+    public long getChildId(int groupPosition, int childPosition) {
+        return childPosition;
+    }
+
+    /**
+     * 组和子元素是否持有稳定的ID,也就是底层数据的改变不会影响到它们
+     *
+     * @return
+     */
+    @Override
+    public boolean hasStableIds() {
+        return true;
+    }
+
+    /**
+     * 获取显示指定组的视图对象
+     *
+     * @param groupPosition
+     * @param isExpanded
+     * @param convertView
+     * @param parent
+     * @return
+     */
+    @Override
+    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+        GroupHolder groupHolder = null;
+        if (convertView == null) {
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_ex_first, null);
+            groupHolder = new GroupHolder(convertView);
+            convertView.setTag(groupHolder);
+        } else {
+            groupHolder = (GroupHolder) convertView.getTag();
+        }
+        groupHolder.tv_ex_first.setText(groupList.get(groupPosition));
+        Log.d("group:",groupPosition+"");
+        return convertView;
+    }
+
+    /**
+     * 获取一个视图对象，显示指定组中的指定子元素数据
+     *
+     * @param groupPosition
+     * @param childPosition
+     * @param isLastChild
+     * @param convertView
+     * @param parent
+     * @return
+     */
+    @Override
+    public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
+        ItemHolder itemHolder = null;
+        if (convertView == null) {
+            convertView = LayoutInflater.from(context).inflate(R.layout.item_ex_second, null);
+            itemHolder = new ItemHolder(convertView);
+            convertView.setTag(itemHolder);
+        } else {
+            itemHolder = (ItemHolder) convertView.getTag();
+        }
+        itemHolder.tv_ex_second_user.setText(itemList.get(groupPosition).get(childPosition));
+        Log.d("child:",itemList.get(groupPosition).get(childPosition));
+        return convertView;
+    }
+
+    /**
+     * 是否选中指定位置上的子元素。是否选中指定位置上的子元素
+     *
+     * @param groupPosition
+     * @param childPosition
+     * @return
+     */
+    @Override
+    public boolean isChildSelectable(int groupPosition, int childPosition) {
+        return true;
+    }
+
+    class GroupHolder {
+        @BindView(R.id.tv_ex_first)
+        TextView tv_ex_first;
+
+        public GroupHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+
+    class ItemHolder {
+        @BindView(R.id.tv_ex_second_user)
+        TextView tv_ex_second_user;
+
+        public ItemHolder(View view) {
+            ButterKnife.bind(this, view);
+        }
+    }
+}

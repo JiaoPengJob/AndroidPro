@@ -1,0 +1,55 @@
+package com.tch.zx.adapter.contacts;
+
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.tch.zx.R;
+import com.tubb.smrv.SwipeHorizontalMenuLayout;
+
+import java.util.List;
+
+/**
+ * 动态评论的适配器
+ */
+
+public class CommentDynamicAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+
+    private Context context;
+
+    private List<String> list;
+
+    public CommentDynamicAdapter(Context context, List<String> list) {
+        this.context = context;
+        this.list = list;
+    }
+
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View layout = LayoutInflater.from(context).inflate(R.layout.item_comment_dynamic, parent, false);
+        return new CommentDynamicAdapter.MyHolder(layout);
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        if (holder instanceof CommentDynamicAdapter.MyHolder) {
+//            ((CommentDynamicAdapter.MyHolder) holder).swipeHorizontalMenuLayout.setSwipeEnable(true);
+        }
+    }
+
+    @Override
+    public int getItemCount() {
+        return list.size();
+    }
+
+    // 通过holder的方式来初始化每一个ChildView的内容
+    class MyHolder extends RecyclerView.ViewHolder {
+
+        public MyHolder(View itemView) {
+            super(itemView);
+
+        }
+    }
+}

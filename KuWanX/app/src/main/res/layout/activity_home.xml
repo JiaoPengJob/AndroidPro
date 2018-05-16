@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tch.kuwanx.ui.HomeActivity">
+
+    <com.tch.kuwanx.view.CustomViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></com.tch.kuwanx.view.CustomViewPager>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <View
+            android:id="@+id/viewHomeMenuLine"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:background="#B4B3B3"></View>
+
+        <android.support.v4.app.FragmentTabHost
+            android:id="@+id/host"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/viewHomeMenuLine">
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0" />
+
+        </android.support.v4.app.FragmentTabHost>
+
+        <View
+            android:id="@+id/viewHomeMenuDark"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#80000000"
+            android:visibility="gone"></View>
+
+    </RelativeLayout>
+
+</LinearLayout>

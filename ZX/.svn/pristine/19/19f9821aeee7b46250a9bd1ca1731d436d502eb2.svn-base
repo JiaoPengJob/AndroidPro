@@ -1,0 +1,94 @@
+package com.tch.zx.activity.line.column;
+
+import android.content.Intent;
+import android.content.pm.LabeledIntent;
+import android.os.Build;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 专栏信息简介页面
+ */
+public class ColumnInfoActivity extends AppCompatActivity {
+
+    //弹出框取消
+    private TextView tv_exit_dialog;
+    //弹出框确定
+    private TextView tv_sure_dialog;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_column_info);
+        //集成使用Butterknife
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+    }
+
+    /**
+     * 后退
+     */
+    @OnClick(R.id.iv_return_column_info)
+    public void returnBack() {
+        ColumnInfoActivity.this.finish();
+    }
+
+    /**
+     * 免费体验
+     */
+    @OnClick(R.id.tv_column_free_experience)
+    public void freeExperience() {
+        Intent intent = new Intent(ColumnInfoActivity.this, FreeExperienceActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 订阅
+     */
+    @OnClick(R.id.tv_column_subscription)
+    public void tv_column_subscription() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(ColumnInfoActivity.this);
+        //获取自定义布局
+        View layout = getLayoutInflater().inflate(R.layout.dialog_pay_column, null);
+        builder.setView(layout);
+        final AlertDialog alertDialog = builder.create();
+        tv_exit_dialog = (TextView) layout.findViewById(R.id.tv_exit_dialog);
+        tv_sure_dialog = (TextView) layout.findViewById(R.id.tv_sure_dialog);
+        tv_exit_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.cancel();
+            }
+        });
+        tv_sure_dialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ColumnInfoActivity.this,BuySubscriptionActivity.class);
+                startActivity(intent);
+            }
+        });
+        alertDialog.show();
+    }
+}

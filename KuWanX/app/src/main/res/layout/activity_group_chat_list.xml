@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    tools:context="com.tch.kuwanx.ui.message.GroupChatListActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlGroupTitle"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#FFDA44"
+        android:padding="5dp">
+
+        <ImageButton
+            android:id="@+id/ibGroupBack"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:scaleType="centerInside"
+            android:src="@mipmap/base_point" />
+
+        <TextView
+            android:id="@+id/tvGroupListTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="消息"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/ibGroupAddMenu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/msg_title_add" />
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshGroupChatList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlGroupTitle">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvGroupList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:background="#FFFFFF"></android.support.v7.widget.RecyclerView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <View
+        android:id="@+id/viewGroupDark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlGroupTitle"
+        android:background="#80000000"
+        android:visibility="gone"></View>
+
+</RelativeLayout>

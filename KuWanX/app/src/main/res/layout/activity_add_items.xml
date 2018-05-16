@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gcssloop.widget.RCRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="40dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="40dp"
+    android:background="@drawable/dialog_theme"
+    app:round_corner="10dp"
+    tools:context="com.tch.kuwanx.ui.mine.article.AddItemsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFDA44"
+            android:padding="10dp"
+            android:text="添加物品"
+            android:textColor="#333333"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/llItemsFirstView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="物品名称"
+                android:textColor="#817E7E"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/etItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/oval_bgm_search"
+                android:hint="输入物品名称"
+                android:imeOptions="actionSearch"
+                android:lines="1"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textCursorDrawable="@drawable/edit_cursor"
+                android:textSize="13sp" />
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refreshAddItems"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvAddItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"></android.support.v7.widget.RecyclerView>
+
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlItemsSecondView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btItemsAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/oval_submit_button"
+                android:padding="10dp"
+                android:text="添加"
+                android:textColor="#333333"
+                android:textSize="12sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btItemsAdd"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <com.gcssloop.widget.RCRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:round_corner="10dp">
+
+                        <com.youth.banner.Banner
+                            android:id="@+id/bannerItems"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            app:indicator_drawable_selected="@drawable/banner_selected"
+                            app:indicator_drawable_unselected="@drawable/banner_unselected"
+                            app:indicator_height="5dp"
+                            app:indicator_width="5dp" />
+
+                    </com.gcssloop.widget.RCRelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvItemsAddContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="内容"
+                        android:textColor="#808080"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:id="@+id/etItemsAddInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/oval_add_item_rim"
+                        android:gravity="left"
+                        android:hint="请输入该物品简介"
+                        android:padding="6dp"
+                        android:textColor="#808080"
+                        android:textCursorDrawable="@drawable/edit_cursor"
+                        android:textSize="10sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvItemsAddPhotos"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:nestedScrollingEnabled="false"></android.support.v7.widget.RecyclerView>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</com.gcssloop.widget.RCRelativeLayout>

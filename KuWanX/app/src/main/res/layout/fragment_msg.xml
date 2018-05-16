@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlMsgTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFDA44"
+        android:padding="10dp">
+
+        <com.flyco.tablayout.SegmentTabLayout xmlns:tl="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/msgTabView"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            tl:tl_bar_color="#F2C202"
+            tl:tl_bar_stroke_color="#F2C202"
+            tl:tl_indicator_anim_enable="true"
+            tl:tl_indicator_color="#FFFFFF"
+            tl:tl_indicator_corner_radius="8dp"
+            tl:tl_indicator_margin_bottom="2sp"
+            tl:tl_indicator_margin_left="2sp"
+            tl:tl_indicator_margin_right="2sp"
+            tl:tl_indicator_margin_top="2sp"
+            tl:tl_indicator_style="BLOCK"
+            tl:tl_tab_padding="5dp"
+            tl:tl_tab_space_equal="true"
+            tl:tl_tab_width="80dp"
+            tl:tl_textSelectColor="#F2C202"
+            tl:tl_textUnselectColor="#FFFFFF"
+            tl:tl_textsize="15sp" />
+
+        <ImageButton
+            android:id="@+id/ibMsgAddMenu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:scaleType="fitXY"
+            android:src="@drawable/msg_title_add" />
+
+    </RelativeLayout>
+
+    <com.tch.kuwanx.view.CustomViewPager
+        android:id="@+id/cvpMsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlMsgTitle"></com.tch.kuwanx.view.CustomViewPager>
+
+    <View
+        android:id="@+id/viewBgmDark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlMsgTitle"
+        android:background="#80000000"
+        android:visibility="gone"></View>
+
+</RelativeLayout>

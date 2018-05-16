@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:id="@+id/llSearchParent"
+    tools:context="com.tch.zx.activity.line.SearchMainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <SearchView
+            android:id="@+id/sv_search_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/shape_search"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:iconifiedByDefault="false"
+            android:queryHint="请输入您要搜索的内容"
+            android:searchIcon="@mipmap/search_main_transparent"></SearchView>
+
+        <TextView
+            android:id="@+id/tv_search_begin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/single_green"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line"></View>
+
+    <TextView
+        android:id="@+id/tv_search_unsearch_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="抱歉,未能找到符合搜索条件的相关信息"
+        android:textColor="@color/text_user"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/sv_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgm_search_main"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/search_history_list"></include>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ExpandableListView
+        android:id="@+id/elv_searched"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"></ExpandableListView>
+
+</LinearLayout>

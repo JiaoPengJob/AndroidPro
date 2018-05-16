@@ -1,0 +1,186 @@
+package com.tch.zx.adapter.mine;
+
+import android.content.Context;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.tch.zx.R;
+import com.tch.zx.bean.TestBean;
+
+import java.util.List;
+
+import butterknife.ButterKnife;
+
+/**
+ * 收藏/全部
+ */
+
+public class CollectionAllAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements View.OnClickListener {
+
+    private Context context;
+    private List<TestBean> list;
+
+    public enum Item_Type {
+        RECYCLEVIEW_ITEM_TYPE_1,
+        RECYCLEVIEW_ITEM_TYPE_2,
+        RECYCLEVIEW_ITEM_TYPE_3,
+        RECYCLEVIEW_ITEM_TYPE_4
+    }
+
+    private OnItemClickListener mOnItemClickListener = null;
+    private int index = 0;
+
+    public void setSelectedPosition(int index) {
+        this.index = index;
+    }
+
+    public static interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (mOnItemClickListener != null) {
+            //注意这里使用getTag方法获取position
+            mOnItemClickListener.onItemClick(v, (int) v.getTag());
+        }
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.mOnItemClickListener = listener;
+    }
+
+    /**
+     * 构造函数
+     *
+     * @param context 当前文本对象
+     * @param list    数据集合
+     */
+    public CollectionAllAdapter(Context context, List<TestBean> list) {
+        this.context = context;
+        this.list = list;
+    }
+
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        if (viewType == Item_Type.RECYCLEVIEW_ITEM_TYPE_1.ordinal()) {
+            View mView = LayoutInflater.from(context).inflate(R.layout.item_online_player_main, null);
+            mView.setOnClickListener(this);
+            OnlineHolder viewHolder = new OnlineHolder(mView);
+            return viewHolder;
+        } else if (viewType == Item_Type.RECYCLEVIEW_ITEM_TYPE_2.ordinal()) {
+            View mView = LayoutInflater.from(context).inflate(R.layout.item_class_purchased, null);
+            mView.setOnClickListener(this);
+            ClassHolder viewHolder = new ClassHolder(mView);
+            return viewHolder;
+        } else if (viewType == Item_Type.RECYCLEVIEW_ITEM_TYPE_3.ordinal()) {
+            View mView = LayoutInflater.from(context).inflate(R.layout.item_column_subsciption, null);
+            mView.setOnClickListener(this);
+            ColumnHolder viewHolder = new ColumnHolder(mView);
+            return viewHolder;
+        } else if (viewType == Item_Type.RECYCLEVIEW_ITEM_TYPE_4.ordinal()) {
+            View mView = LayoutInflater.from(context).inflate(R.layout.item_unline_purchased, null);
+            mView.setOnClickListener(this);
+            UnlineHolder viewHolder = new UnlineHolder(mView);
+            return viewHolder;
+        }
+        return null;
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        if (holder instanceof OnlineHolder) {
+            ((OnlineHolder) holder).itemView.setTag(position);
+        } else if (holder instanceof ClassHolder) {
+            ((ClassHolder) holder).itemView.setTag(position);
+        } else if (holder instanceof ColumnHolder) {
+            ((ColumnHolder) holder).itemView.setTag(position);
+        } else if (holder instanceof UnlineHolder) {
+            ((UnlineHolder) holder).itemView.setTag(position);
+        }
+    }
+
+    @Override
+    public int getItemCount() {
+        return list.size();
+    }
+
+    /**
+     * 返回值赋值给onCreateViewHolder的参数viewType
+     *
+     * @param position
+     * @return
+     */
+    @Override
+    public int getItemViewType(int position) {
+        if (list.get(position).getType() == 0) {
+            return Item_Type.RECYCLEVIEW_ITEM_TYPE_1.ordinal();
+        } else if (list.get(position).getType() == 1) {
+            return Item_Type.RECYCLEVIEW_ITEM_TYPE_2.ordinal();
+        } else if (list.get(position).getType() == 2) {
+            return Item_Type.RECYCLEVIEW_ITEM_TYPE_3.ordinal();
+        } else if (list.get(position).getType() == 3) {
+            return Item_Type.RECYCLEVIEW_ITEM_TYPE_4.ordinal();
+        }
+        return -1;
+    }
+
+    /**
+     * 直播
+     */
+    class OnlineHolder extends RecyclerView.ViewHolder {
+
+        View itemView;
+
+        public OnlineHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+            this.itemView = itemView;
+        }
+    }
+
+    /**
+     * 小课
+     */
+    class ClassHolder extends RecyclerView.ViewHolder {
+
+        View itemView;
+
+        public ClassHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+            this.itemView = itemView;
+        }
+    }
+
+    /**
+     * 专栏
+     */
+    class ColumnHolder extends RecyclerView.ViewHolder {
+
+        View itemView;
+
+        public ColumnHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+            this.itemView = itemView;
+        }
+    }
+
+    /**
+     * 线下
+     */
+    class UnlineHolder extends RecyclerView.ViewHolder {
+
+        View itemView;
+
+        public UnlineHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+            this.itemView = itemView;
+        }
+    }
+
+}

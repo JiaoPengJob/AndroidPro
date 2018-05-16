@@ -1,0 +1,79 @@
+package com.tch.zx.activity.contacts;
+
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.TextView;
+
+import com.tch.zx.R;
+import com.tch.zx.activity.ChiefActivity;
+import com.tch.zx.adapter.contacts.NewFriendsAdapter;
+import com.tch.zx.view.RecyclerViewDecoration;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 新朋友
+ */
+public class NewFridensActivity extends AppCompatActivity {
+
+    //列表
+    @BindView(R.id.rv_add_new_friends)
+    RecyclerView rv_add_new_friends;
+
+    //列表适配器
+    private NewFriendsAdapter newFriendsAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_new_fridens);
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+
+        setListData();
+    }
+
+    /**
+     * 加载列表数据
+     */
+    private void setListData() {
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 13; i++) {
+            list.add("");
+        }
+
+        newFriendsAdapter = new NewFriendsAdapter(this, list);
+        rv_add_new_friends.setLayoutManager(new LinearLayoutManager(this));
+        //设置分割线
+        rv_add_new_friends.addItemDecoration(new RecyclerViewDecoration(this, "#EAEAEA", 1, false));
+        rv_add_new_friends.setAdapter(newFriendsAdapter);
+    }
+
+    /**
+     * 清除点击事件
+     */
+    @OnClick(R.id.tv_clear_list_data)
+    public void clearData() {
+
+    }
+
+}

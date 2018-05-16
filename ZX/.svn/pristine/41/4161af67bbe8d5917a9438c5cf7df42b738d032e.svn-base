@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_popup_reward"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_reward_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/shape_corner"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="取消"
+        android:textColor="@color/text_three"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_reward_popup"
+        android:layout_margin="5dp"
+        android:background="@drawable/shape_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="对当前讲师打赏多少?"
+            android:textColor="@color/text_three"
+            android:textSize="16sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tv_payment_ten"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_corner_background_green"
+                    android:gravity="center"
+                    android:text="￥10"
+                    android:textColor="@color/single_white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_payment_twenty"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_corner_background_green"
+                    android:gravity="center"
+                    android:text="￥20"
+                    android:textColor="@color/single_white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_payment_fifty"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_corner_background_green"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="￥50"
+                    android:textColor="@color/single_white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_payment_hundred"
+                    android:layout_width="45dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_corner_background_green"
+                    android:gravity="center"
+                    android:text="￥100"
+                    android:textColor="@color/single_white"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <EditText
+            android:id="@+id/et_popup_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_corner_green"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:hint="请输入其他金额"
+            android:inputType="number"
+            android:padding="7dp"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/line"></View>
+
+        <TextView
+            android:id="@+id/tv_popup_wechat_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="微信支付"
+            android:textColor="@color/text_three"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line"></View>
+
+        <TextView
+            android:id="@+id/tv_popup_ali_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="支付宝支付"
+            android:textColor="@color/text_three"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

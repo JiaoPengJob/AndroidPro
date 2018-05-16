@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical"
+    tools:context="com.tch.kuwanx.ui.mine.UpdateNameActivity">
+
+    <include layout="@layout/title"></include>
+
+    <EditText
+        android:id="@+id/etUpdateNickName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:hint="请输入您的昵称"
+        android:lines="1"
+        android:maxLength="10"
+        android:padding="10dp"
+        android:textColor="#333333"
+        android:textCursorDrawable="@drawable/edit_cursor"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="用户名为4-10位字符，请输入数字/英文和中文"
+        android:textColor="#333333"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/btUpdateNickName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/oval_submit_button"
+        android:text="确认修改"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+</LinearLayout>

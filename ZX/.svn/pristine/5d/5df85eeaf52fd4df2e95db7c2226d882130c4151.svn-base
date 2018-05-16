@@ -1,0 +1,77 @@
+package com.tch.zx.activity.line.online;
+
+import android.support.v4.view.ViewPager;
+import android.os.Bundle;
+import android.view.Window;
+import android.widget.TextView;
+
+import com.ogaclejapan.smarttablayout.SmartTabLayout;
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
+import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
+import com.tch.zx.R;
+import com.tch.zx.activity.BaseActivity;
+import com.tch.zx.fragment.line.HotOnlinePlayerRemdFragment;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 热门直播主页面
+ */
+public class OnLinePlayerMainActivity extends BaseActivity {
+
+    //tab标签栏
+    @BindView(R.id.stl_general)
+    SmartTabLayout stl_general;
+    //标签栏viewpager
+    @BindView(R.id.vp_general)
+    ViewPager vp_general;
+    //头标题info
+    @BindView(R.id.tv_title_top_all)
+    TextView tv_title_top_all;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_on_line_player_main);
+        //集成使用Butterknife
+        ButterKnife.bind(this);
+        initView();
+        setViewPagersData();
+    }
+
+    /**
+     * 初始化View
+     */
+    private void initView() {
+        tv_title_top_all.setText("热门直播");
+    }
+
+    /**
+     * 加载tabView信息
+     */
+    private void setViewPagersData() {
+        //向选项卡布局中添加子布局Fragment，
+        FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
+                getSupportFragmentManager(), FragmentPagerItems.with(this)
+                .add("推荐", HotOnlinePlayerRemdFragment.class)
+                .create());
+        vp_general.setAdapter(adapter);
+        stl_general.setViewPager(vp_general);
+    }
+
+    /**
+     * 返回
+     */
+    @OnClick(R.id.ll_return_back_top_all)
+    public void returnBackOnClick() {
+        OnLinePlayerMainActivity.this.finish();
+    }
+
+}

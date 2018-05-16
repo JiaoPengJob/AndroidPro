@@ -1,0 +1,135 @@
+package com.tch.zx.activity.message;
+
+import android.content.Intent;
+import android.os.Build;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.text.method.PasswordTransformationMethod;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.tch.zx.R;
+import com.tch.zx.util.HelperUtil;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class AddFriendsActivity extends AppCompatActivity {
+
+    //输入框
+    @BindView(R.id.et_add_friend_phone)
+    EditText et_add_friend_phone;
+    //清除的×
+    @BindView(R.id.iv_clear_input)
+    ImageView iv_clear_input;
+    //用户不存在
+    @BindView(R.id.tv_none_user)
+    TextView tv_none_user;
+    //搜索
+    @BindView(R.id.tv_search_friend)
+    TextView tv_search_friend;
+    //搜索到的用户信息
+    @BindView(R.id.ll_user_info)
+    LinearLayout ll_user_info;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_add_friends);
+        //集成使用Butterknife
+        ButterKnife.bind(this);
+        //设置沉浸式状态栏
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            WindowManager.LayoutParams localLayoutParams = getWindow().getAttributes();
+            localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
+        }
+
+        initViewListener();
+    }
+
+    /**
+     * 设置组件监听事件
+     */
+    private void initViewListener() {
+        //输入框内容变化监听
+        et_add_friend_phone.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (!TextUtils.isEmpty(charSequence)) {
+                    iv_clear_input.setVisibility(View.VISIBLE);
+                    tv_none_user.setVisibility(View.GONE);
+                } else {
+                    iv_clear_input.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+    }
+
+    /**
+     * 搜索
+     */
+    @OnClick(R.id.tv_search_friend)
+    public void searchData() {
+        if (!TextUtils.isEmpty(et_add_friend_phone.getText().toString()) && HelperUtil.isMobileNO(et_add_friend_phone.getText().toString())) {
+            //数据不为空
+            if (true) {
+                ll_user_info.setVisibility(View.VISIBLE);
+                tv_none_user.setVisibility(View.GONE);
+                ll_user_info.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(AddFriendsActivity.this,FriendInfoActivity.class);
+                        startActivity(intent);
+                    }
+                });
+            } else {
+                ll_user_info.setVisibility(View.GONE);
+                tv_none_user.setVisibility(View.VISIBLE);
+            }
+        } else {
+            Toast.makeText(AddFriendsActivity.this, "手机号有误!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * 清除输入框
+     */
+    @OnClick(R.id.iv_clear_input)
+    public void clearInput() {
+        et_add_friend_phone.setText("");
+        iv_clear_input.setVisibility(View.GONE);
+    }
+
+    /**
+     * 后退
+     */
+    @OnClick(R.id.ll_together_msg_title_return)
+    public void returnBack(){
+        AddFriendsActivity.this.finish();
+    }
+}

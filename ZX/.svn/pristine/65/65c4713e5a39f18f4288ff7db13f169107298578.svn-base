@@ -1,0 +1,83 @@
+package com.tch.zx.activity.contacts;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.view.View;
+import android.view.Window;
+import com.tch.zx.R;
+import com.tch.zx.activity.BaseActivity;
+import com.tch.zx.activity.personal.DetailedInfoActivity;
+import com.tch.zx.adapter.contacts.AttentionAdapter;
+import com.tch.zx.view.RecyclerViewDecoration;
+import com.tubb.smrv.SwipeMenuRecyclerView;
+import java.util.ArrayList;
+import java.util.List;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+/**
+ * 通讯录/已关注
+ */
+public class AttentionActivity extends BaseActivity {
+
+    /**
+     * 列表
+     */
+    @BindView(R.id.smrv_attention)
+    SwipeMenuRecyclerView smrv_attention;
+
+    /**
+     * 适配器
+     */
+    private AttentionAdapter attentionAdapter;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //去除标题栏,两种方式
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+        setContentView(R.layout.activity_attention);
+        ButterKnife.bind(this);
+
+        setListData();
+
+    }
+
+    /**
+     * 记载列表数据
+     */
+    private void setListData() {
+        List<String> list = new ArrayList<String>();
+        for (int i = 0; i < 10; i++) {
+            list.add("");
+        }
+
+        attentionAdapter = new AttentionAdapter(this, list);
+
+        smrv_attention.setLayoutManager(new LinearLayoutManager(this));
+        //设置分割线
+        smrv_attention.addItemDecoration(new RecyclerViewDecoration(this, "#EAEAEA", 1, false));
+        smrv_attention.setAdapter(attentionAdapter);
+        attentionAdapter.setOnItemClickListener(new AttentionAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(AttentionActivity.this, DetailedInfoActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    /**
+     * 返回
+     */
+    @OnClick(R.id.ll_return_attention)
+    public void returnAttention() {
+        this.finish();
+    }
+
+}

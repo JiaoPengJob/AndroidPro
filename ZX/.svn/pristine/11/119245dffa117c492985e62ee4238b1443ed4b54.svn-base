@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_input_talk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_release_talk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:text="发布"
+            android:textColor="@color/single_green"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_enjoy_talk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/tv_release_talk"
+            android:scaleType="fitXY"
+            android:src="@mipmap/enjoy_icon" />
+
+        <LinearLayout
+            android:id="@+id/ll_input_enjoy_player_talk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv_enjoy_talk"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_input_enjoy_player_talk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_talk_edit"
+                android:hint="我要评论..."
+                android:padding="5dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_emotionview_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_input_enjoy_player_talk" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_talk"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/rl_input_talk"
+        android:background="@color/line"></View>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_talk_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view_talk"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

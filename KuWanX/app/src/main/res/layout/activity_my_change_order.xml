@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical"
+    tools:context="com.tch.kuwanx.ui.mine.MyChangeOrderActivity">
+
+    <include layout="@layout/title"></include>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollMyChangeOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.tch.kuwanx.view.MyEasyIndicator
+                android:id="@+id/indicatorMyChangeOrder"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#FFFFFF"
+                app:indicator_bottom_height="2dp"
+                app:indicator_bottom_line_color="#DAD9D9"
+                app:indicator_bottom_line_height="1dp"
+                app:indicator_height="43dp"
+                app:indicator_isBottom_line="true"
+                app:indicator_line_color="#FFDA44"
+                app:indicator_normal_color="#000000"
+                app:indicator_selected_color="#FFDA44"
+                app:indicator_textSize="14sp"
+                app:indicator_vertical_line_w="0dp" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshMyChangeOrder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvMyChangeOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+package com.tch.zx.activity.login_register;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+import com.tch.zx.R;
+
+/**
+ * 找回密码页面
+ */
+public class FindPasswordBackActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_register);
+    }
+}

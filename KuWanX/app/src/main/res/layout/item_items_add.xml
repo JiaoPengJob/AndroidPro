@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/ivAddItemImg"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tvAddItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="物品名称"
+        android:textColor="#333333"
+        android:textSize="13sp" />
+
+</LinearLayout>
